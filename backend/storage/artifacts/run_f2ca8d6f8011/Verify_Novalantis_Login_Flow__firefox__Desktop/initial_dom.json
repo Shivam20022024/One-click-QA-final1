@@ -1,0 +1,5 @@
+{
+  "test_name": "Verify Novalantis Login Flow",
+  "base_url": "http://localhost:5173",
+  "dom_elements": []
+}

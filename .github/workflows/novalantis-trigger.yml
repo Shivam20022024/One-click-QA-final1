@@ -1,0 +1,29 @@
+name: Novalantis Test Execution
+
+on:
+  deployment_status:
+  workflow_dispatch:
+    inputs:
+      targetUrl:
+        description: 'Target URL to test'
+        required: true
+        default: 'https://staging.example.com'
+
+jobs:
+  run-tests:
+    if: github.event.deployment_status.state == 'success' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Novalantis
+        run: |
+          TARGET_URL="${{ github.event.deployment_status.environment_url || github.event.inputs.targetUrl }}"
+          
+          curl -X POST "https://api.novalantis.com/api/v1/executions/run" \
+            -H "Content-Type: application/json" \
+            -H "x-api-key: ${{ secrets.NOVALANTIS_API_KEY }}" \
+            -d '{
+              "testName": "CI/CD Smoke Test",
+              "targetUrl": "'"$TARGET_URL"'",
+              "instruction": "Open homepage and assert it loads correctly without errors.",
+              "browser": "chromium"
+            }'

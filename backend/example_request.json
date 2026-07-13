@@ -1,0 +1,39 @@
+{
+  "test_name": "SauceDemo Login Test",
+  "base_url": "https://www.saucedemo.com",
+  "headless": true,
+  "browser": "chromium",
+  "default_timeout": 30000,
+  "config": {
+    "headless": true,
+    "timeout": 30000,
+    "retries": 2,
+    "fail_on_console_error": true,
+    "strict_mode": false
+  },
+  "steps": [
+    {
+      "action": "goto",
+      "url": "/"
+    },
+    {
+      "action": "fill",
+      "selector": "#user-name",
+      "value": "standard_user"
+    },
+    {
+      "action": "fill",
+      "selector": "#password",
+      "value": "secret_sauce"
+    },
+    {
+      "action": "click",
+      "selector": "#login-button"
+    },
+    {
+      "action": "assert_visible",
+      "selector": ".inventory_list",
+      "retries": 2
+    }
+  ]
+}

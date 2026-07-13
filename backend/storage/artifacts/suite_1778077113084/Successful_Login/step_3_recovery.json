@@ -1,0 +1,7 @@
+{
+  "step_index": 2,
+  "action": "click",
+  "selector_used": "#login-button",
+  "recovery_attempts": [],
+  "error": "click timed out waiting for '#login-button': Locator.wait_for: Timeout 30000ms exceeded.\nCall log:\nwaiting for locator(\"#login-button\") to be visible\n"
+}

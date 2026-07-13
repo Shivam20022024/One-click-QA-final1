@@ -1,0 +1,7 @@
+{
+  "step_index": 4,
+  "action": "assert_visible",
+  "selector_used": ".inventory_details_desc",
+  "recovery_attempts": [],
+  "error": "assert_visible failed on '.inventory_details_desc': Locator.wait_for: Timeout 30000ms exceeded.\nCall log:\nwaiting for locator(\".inventory_details_desc\") to be visible\n"
+}

@@ -1,0 +1,7 @@
+{
+  "step_index": 1,
+  "action": "fill",
+  "selector_used": "#password",
+  "recovery_attempts": [],
+  "error": "fill failed on '#password': Locator.wait_for: Connection closed while reading from the driver"
+}

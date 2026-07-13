@@ -1,0 +1,501 @@
+{
+  "application": "Sauce Demo",
+  "application_map": {
+    "pages": [
+      "Login Page",
+      "Inventory Page",
+      "Cart Page",
+      "Checkout Step One",
+      "Checkout Step Two",
+      "Checkout Complete"
+    ],
+    "features": [
+      "Login",
+      "Add to Cart",
+      "Checkout",
+      "Fill Details",
+      "Place Order",
+      "Home Navigation"
+    ],
+    "flows": [
+      "User Login to Checkout Flow"
+    ]
+  },
+  "test_suite": {
+    "tests": [
+      {
+        "feature": "Login",
+        "test_type": "positive",
+        "test_name": "Successful login",
+        "expected_intent": "success",
+        "steps": [
+          {
+            "action": "goto",
+            "url": "https://www.saucedemo.com",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "selector": "#user-name",
+            "value": "standard_user",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "selector": "#password",
+            "value": "secret_sauce",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "#login-button",
+            "expected_intent": "success"
+          },
+          {
+            "action": "assert_visible",
+            "selector": ".inventory_item",
+            "expected_intent": "success"
+          }
+        ]
+      },
+      {
+        "feature": "Login",
+        "test_type": "negative",
+        "test_name": "Invalid credentials show error",
+        "expected_intent": "error",
+        "steps": [
+          {
+            "action": "goto",
+            "url": "https://www.saucedemo.com",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "selector": "#user-name",
+            "value": "invalid_user",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "selector": "#password",
+            "value": "wrong_password",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "#login-button",
+            "expected_intent": "success"
+          },
+          {
+            "action": "assert_visible",
+            "selector": ".error-message-container",
+            "expected_intent": "error"
+          }
+        ]
+      },
+      {
+        "feature": "Add to Cart",
+        "test_type": "positive",
+        "test_name": "Add item to cart",
+        "expected_intent": "success",
+        "steps": [
+          {
+            "action": "goto",
+            "url": "https://www.saucedemo.com",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "selector": "#user-name",
+            "value": "standard_user",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "selector": "#password",
+            "value": "secret_sauce",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "#login-button",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "#add-to-cart-sauce-labs-backpack",
+            "expected_intent": "success"
+          },
+          {
+            "action": "assert_visible",
+            "selector": ".shopping_cart_badge",
+            "expected_intent": "success"
+          }
+        ]
+      },
+      {
+        "feature": "Checkout",
+        "test_type": "positive",
+        "test_name": "Successful checkout completion",
+        "expected_intent": "success",
+        "steps": [
+          {
+            "action": "goto",
+            "url": "https://www.saucedemo.com",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "selector": "#user-name",
+            "value": "standard_user",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "selector": "#password",
+            "value": "secret_sauce",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "#login-button",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "#add-to-cart-sauce-labs-backpack",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": ".shopping_cart_link",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "#checkout",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "selector": "#first-name",
+            "value": "John",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "selector": "#last-name",
+            "value": "Doe",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "selector": "#postal-code",
+            "value": "12345",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "#continue",
+            "expected_intent": "success"
+          },
+          {
+            "action": "assert_visible",
+            "selector": "#finish",
+            "expected_intent": "success"
+          }
+        ]
+      },
+      {
+        "feature": "Place Order",
+        "test_type": "positive",
+        "test_name": "Complete purchase flow",
+        "expected_intent": "success",
+        "steps": [
+          {
+            "action": "goto",
+            "url": "https://www.saucedemo.com",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "selector": "#user-name",
+            "value": "standard_user",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "selector": "#password",
+            "value": "secret_sauce",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "#login-button",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "#add-to-cart-sauce-labs-backpack",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": ".shopping_cart_link",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "#checkout",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "selector": "#first-name",
+            "value": "John",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "selector": "#last-name",
+            "value": "Doe",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "selector": "#postal-code",
+            "value": "12345",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "#continue",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "#finish",
+            "expected_intent": "success"
+          },
+          {
+            "action": "assert_visible",
+            "selector": ".complete-header",
+            "expected_intent": "success"
+          }
+        ]
+      },
+      {
+        "feature": "Checkout",
+        "test_type": "negative",
+        "test_name": "Checkout missing required fields",
+        "expected_intent": "error",
+        "steps": [
+          {
+            "action": "goto",
+            "url": "https://www.saucedemo.com",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "selector": "#user-name",
+            "value": "standard_user",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "selector": "#password",
+            "value": "secret_sauce",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "#login-button",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "#add-to-cart-sauce-labs-backpack",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": ".shopping_cart_link",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "#checkout",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "#continue",
+            "expected_intent": "success"
+          },
+          {
+            "action": "assert_visible",
+            "selector": ".error-message-container",
+            "expected_intent": "error"
+          }
+        ]
+      },
+      {
+        "feature": "Home Navigation",
+        "test_type": "e2e",
+        "test_name": "Navigate to products after order",
+        "expected_intent": "success",
+        "steps": [
+          {
+            "action": "goto",
+            "url": "https://www.saucedemo.com",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "selector": "#user-name",
+            "value": "standard_user",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "selector": "#password",
+            "value": "secret_sauce",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "#login-button",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "#add-to-cart-sauce-labs-backpack",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": ".shopping_cart_link",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "#checkout",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "selector": "#first-name",
+            "value": "John",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "selector": "#last-name",
+            "value": "Doe",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "selector": "#postal-code",
+            "value": "12345",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "#continue",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "#finish",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "#back-to-products",
+            "expected_intent": "success"
+          },
+          {
+            "action": "assert_visible",
+            "selector": ".inventory_item",
+            "expected_intent": "success"
+          }
+        ]
+      },
+      {
+        "feature": "Checkout",
+        "test_type": "edge",
+        "test_name": "Checkout with empty inputs",
+        "expected_intent": "validation",
+        "steps": [
+          {
+            "action": "goto",
+            "url": "https://www.saucedemo.com",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "selector": "#user-name",
+            "value": "standard_user",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "selector": "#password",
+            "value": "secret_sauce",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "#login-button",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "#add-to-cart-sauce-labs-backpack",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": ".shopping_cart_link",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "#checkout",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "selector": "#first-name",
+            "value": "",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "selector": "#last-name",
+            "value": "",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "selector": "#postal-code",
+            "value": "",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "#continue",
+            "expected_intent": "success"
+          },
+          {
+            "action": "assert_visible",
+            "selector": ".error-message-container",
+            "expected_intent": "validation"
+          }
+        ]
+      }
+    ]
+  },
+  "base_url": "https://www.saucedemo.com/"
+}

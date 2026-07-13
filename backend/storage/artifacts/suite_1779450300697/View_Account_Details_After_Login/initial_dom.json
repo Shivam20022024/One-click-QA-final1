@@ -1,0 +1,5 @@
+{
+  "test_name": "View Account Details After Login",
+  "base_url": "https://www.saucedemo.com",
+  "dom_elements": []
+}

@@ -1,0 +1,7 @@
+{
+  "step_index": 4,
+  "action": "assert_visible",
+  "selector_used": "#inventory_container",
+  "recovery_attempts": [],
+  "error": "assert_visible failed on '#inventory_container': Locator.wait_for: Error: strict mode violation: locator(\"#inventory_container\") resolved to 2 elements:\n    1) <div id=\"inventory_container\">\u2026</div> aka locator(\"#inventory_container\").first\n    2) <div id=\"inventory_container\" class=\"inventory_contai\u2026>\u2026</div> aka locator(\"[data-test=\\\"inventory-container\\\"]\")\n\nCall log:\nwaiting for locator(\"#inventory_container\") to be visible\n"
+}

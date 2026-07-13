@@ -1,0 +1,5 @@
+{
+  "test_name": "Successful login with valid credentials",
+  "base_url": "https://demo.nopcommerce.com",
+  "dom_elements": []
+}

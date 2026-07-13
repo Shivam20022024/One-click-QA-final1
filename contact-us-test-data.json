@@ -1,0 +1,143 @@
+[
+  {
+    "scenario": "Valid Submission - All fields provided",
+    "type": "positive",
+    "data": {
+      "name": "Jane Doe",
+      "phone": "+91-9876543210",
+      "email": "jane.doe@example.com",
+      "subject": "Enterprise AI Inquiry",
+      "message": "We are interested in your Agentic AI platform for automating our workflows."
+    },
+    "expected_result": "Success message or redirect to thank you page"
+  },
+  {
+    "scenario": "Valid Submission - Only required fields",
+    "type": "positive",
+    "data": {
+      "name": "John Smith",
+      "phone": "9876543210",
+      "email": "john.smith@example.com",
+      "subject": "",
+      "message": "Looking for consultation on document intelligence."
+    },
+    "expected_result": "Success message or redirect to thank you page"
+  },
+  {
+    "scenario": "Invalid Submission - Missing Name",
+    "type": "negative",
+    "data": {
+      "name": "",
+      "phone": "9876543210",
+      "email": "missing.name@example.com",
+      "subject": "Testing",
+      "message": "This is a test message."
+    },
+    "expected_result": "Validation error on Name field"
+  },
+  {
+    "scenario": "Invalid Submission - Missing Phone",
+    "type": "negative",
+    "data": {
+      "name": "Test User",
+      "phone": "",
+      "email": "missing.phone@example.com",
+      "subject": "Testing",
+      "message": "This is a test message."
+    },
+    "expected_result": "Validation error on Phone field"
+  },
+  {
+    "scenario": "Invalid Submission - Missing Email",
+    "type": "negative",
+    "data": {
+      "name": "Test User",
+      "phone": "9876543210",
+      "email": "",
+      "subject": "Testing",
+      "message": "This is a test message."
+    },
+    "expected_result": "Validation error on Email field"
+  },
+  {
+    "scenario": "Invalid Submission - Invalid Email Format",
+    "type": "negative",
+    "data": {
+      "name": "Invalid Email",
+      "phone": "9876543210",
+      "email": "invalidemail.com",
+      "subject": "Testing",
+      "message": "This is a test message."
+    },
+    "expected_result": "Validation error on Email field indicating invalid format"
+  },
+  {
+    "scenario": "Invalid Submission - Missing Message",
+    "type": "negative",
+    "data": {
+      "name": "Missing Message",
+      "phone": "9876543210",
+      "email": "missing.message@example.com",
+      "subject": "Testing",
+      "message": ""
+    },
+    "expected_result": "Validation error on Message field"
+  },
+  {
+    "scenario": "Invalid Submission - Empty Form",
+    "type": "negative",
+    "data": {
+      "name": "",
+      "phone": "",
+      "email": "",
+      "subject": "",
+      "message": ""
+    },
+    "expected_result": "Validation errors on all required fields (Name, Phone, Email, Message)"
+  },
+  {
+    "scenario": "Verify Product Navigation - MukhKhata",
+    "type": "positive",
+    "data": {
+      "target_url": "https://novalantis.com/",
+      "action": "Click Products > MukhKhata"
+    },
+    "expected_result": "URL contains /products/mukhkhata"
+  },
+  {
+    "scenario": "Verify Product Navigation - EvalRFP",
+    "type": "positive",
+    "data": {
+      "target_url": "https://novalantis.com/",
+      "action": "Click Products > EvalRFP"
+    },
+    "expected_result": "URL contains /products/evalrfp"
+  },
+  {
+    "scenario": "Verify Product Navigation - NovaTest AI Suite",
+    "type": "positive",
+    "data": {
+      "target_url": "https://novalantis.com/",
+      "action": "Click Products > NovaTest AI Suite"
+    },
+    "expected_result": "URL contains /products/novatest-ai"
+  },
+  {
+    "scenario": "Verify Product Navigation - Talkly AI",
+    "type": "positive",
+    "data": {
+      "target_url": "https://novalantis.com/",
+      "action": "Click Products > Talkly AI"
+    },
+    "expected_result": "URL contains /products/talklyai"
+  },
+  {
+    "scenario": "Verify Product Navigation - Hireonmous",
+    "type": "positive",
+    "data": {
+      "target_url": "https://novalantis.com/",
+      "action": "Click Products > Hireonmous"
+    },
+    "expected_result": "URL contains /products/hireonmous"
+  }
+]

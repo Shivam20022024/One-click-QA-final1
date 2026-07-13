@@ -1,0 +1,5 @@
+{
+  "test_name": "Verify successful logout",
+  "base_url": "https://novalantis.com",
+  "dom_elements": []
+}

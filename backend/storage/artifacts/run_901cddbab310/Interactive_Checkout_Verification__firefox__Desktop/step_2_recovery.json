@@ -1,0 +1,7 @@
+{
+  "step_index": 1,
+  "action": "fill",
+  "selector_used": "input#user-name",
+  "recovery_attempts": [],
+  "error": "Selector pre-validation failed for 'input#user-name' on 'fill': Selector not found"
+}

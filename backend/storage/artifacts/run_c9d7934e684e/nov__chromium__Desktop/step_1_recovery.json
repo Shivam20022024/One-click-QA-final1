@@ -1,0 +1,7 @@
+{
+  "step_index": 0,
+  "action": "goto",
+  "selector_used": "",
+  "recovery_attempts": [],
+  "error": "Browser network error: net::ERR_ABORTED"
+}

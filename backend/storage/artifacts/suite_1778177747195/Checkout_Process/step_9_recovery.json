@@ -1,0 +1,7 @@
+{
+  "step_index": 8,
+  "action": "fill",
+  "selector_used": "#postal-code",
+  "recovery_attempts": [],
+  "error": "Selector pre-validation failed for '#postal-code' on 'fill': Selector not found"
+}

@@ -1,0 +1,5 @@
+{
+  "test_name": "Add Item to Cart",
+  "base_url": "https://www.saucedemo.com",
+  "dom_elements": []
+}

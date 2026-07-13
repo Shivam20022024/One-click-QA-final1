@@ -1,0 +1,7 @@
+{
+  "step_index": 1,
+  "action": "assert_visible",
+  "selector_used": "#login-button",
+  "recovery_attempts": [],
+  "error": "Selector '#root' found (1 elements) but none are visible"
+}

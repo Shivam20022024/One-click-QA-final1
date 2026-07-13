@@ -1,0 +1,7 @@
+{
+  "step_index": 3,
+  "action": "click",
+  "selector_used": "text=Log in",
+  "recovery_attempts": [],
+  "error": "Browser network error: net::ERR_ABORTED"
+}

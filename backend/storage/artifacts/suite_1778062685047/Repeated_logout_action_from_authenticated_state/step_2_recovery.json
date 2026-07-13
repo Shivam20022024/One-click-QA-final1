@@ -1,0 +1,13 @@
+{
+  "step_index": 1,
+  "action": "fill",
+  "selector_used": "[placeholder*='username' i]",
+  "recovery_attempts": [
+    {
+      "strategy": "heuristic",
+      "candidate": "[placeholder*='username' i]",
+      "success": true
+    }
+  ],
+  "error": "Browser network error: net::ERR_ABORTED"
+}

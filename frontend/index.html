@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en" class="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NovaTest AI – Enterprise QA Platform</title>
+    <meta name="description" content="NovaTest AI – One-click autonomous AI test generation, parallel execution, and self-healing across all browsers." />
+    <!-- Blocking theme script: applies before first paint to prevent FOUC. Default = light. -->
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem('novatest_theme');
+          var theme = (saved === 'light' || saved === 'dark') ? saved : 'light';
+          document.documentElement.classList.remove('dark', 'light');
+          document.documentElement.classList.add(theme);
+        } catch (e) {
+          document.documentElement.classList.add('light');
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

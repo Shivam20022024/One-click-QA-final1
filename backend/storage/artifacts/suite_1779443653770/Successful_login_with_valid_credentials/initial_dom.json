@@ -1,0 +1,5 @@
+{
+  "test_name": "Successful login with valid credentials",
+  "base_url": "https://novalantis.com",
+  "dom_elements": []
+}

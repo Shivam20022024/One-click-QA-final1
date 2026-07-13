@@ -1,0 +1,5 @@
+{
+  "test_name": "Interactive Checkout Verification",
+  "base_url": "https://novalantis.com",
+  "dom_elements": []
+}

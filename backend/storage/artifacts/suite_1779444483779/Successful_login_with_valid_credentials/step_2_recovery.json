@@ -1,0 +1,7 @@
+{
+  "step_index": 1,
+  "action": "fill",
+  "selector_used": "input[name=\"your-email\"]",
+  "recovery_attempts": [],
+  "error": "fill failed on 'text=your': Locator.fill: Error: Element is not an <input>, <textarea> or [contenteditable] element\nCall log:\nwaiting for locator(\"text=your\")\n  -   locator resolved to <a class=\"wp-login-lost-password\" href=\"https://nov\u2026>Lost your password?</a>\n  -   fill(\"valid_user@example.com\")\n  - attempting fill action\n  -   waiting for element to be visible, enabled and editable\n"
+}

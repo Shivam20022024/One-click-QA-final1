@@ -1,0 +1,7 @@
+{
+  "step_index": 3,
+  "action": "click",
+  "selector_used": ".btn_inventory",
+  "recovery_attempts": [],
+  "error": "click failed on '.btn_inventory': Locator.wait_for: Connection closed while reading from the driver"
+}

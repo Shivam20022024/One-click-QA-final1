@@ -1,0 +1,7 @@
+{
+  "step_index": 4,
+  "action": "click",
+  "selector_used": ".btn_inventory",
+  "recovery_attempts": [],
+  "error": "click failed on '.btn_inventory': Locator.wait_for: Error: strict mode violation: locator(\".btn_inventory\") resolved to 6 elements:\n    1) <button id=\"add-to-cart-sauce-labs-backpack\" name=\"add-t\u2026>Add to cart</button> aka locator(\"[data-test=\\\"add-to-cart-sauce-labs-backpack\\\"]\")\n    2) <button id=\"add-to-cart-sauce-labs-bike-light\" name=\"add\u2026>Add to cart</button> aka locator(\"[data-test=\\\"add-to-cart-sauce-labs-bike-light\\\"]\")\n    3) <button id=\"add-to-cart-sauce-labs-bolt-t-shirt\" name=\"a\u2026>Add to cart</button> aka locator(\"[data-test=\\\"add-to-cart-sauce-labs-bolt-t-shirt\\\"]\")\n    4) <button id=\"add-to-cart-sauce-labs-fleece-jacket\" name=\"\u2026>Add to cart</button> aka locator(\"[data-test=\\\"add-to-cart-sauce-labs-fleece-jacket\\\"]\")\n    5) <button id=\"add-to-cart-sauce-labs-onesie\" name=\"add-to-\u2026>Add to cart</button> aka locator(\"[data-test=\\\"add-to-cart-sauce-labs-onesie\\\"]\")\n    6) <button class=\"btn btn_primary btn_small btn_inventory \"\u2026>Add to cart</button> aka locator(\"[data-test=\\\"add-to-cart-test\\\\.allthethings\\\\(\\\\)-t-shirt-\\\\(red\\\\)\\\"]\")\n\nCall log:\nwaiting for locator(\".btn_inventory\") to be visible\n"
+}

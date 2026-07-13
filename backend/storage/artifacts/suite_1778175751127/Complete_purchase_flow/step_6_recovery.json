@@ -1,0 +1,7 @@
+{
+  "step_index": 5,
+  "action": "click",
+  "selector_used": ".cart-link",
+  "recovery_attempts": [],
+  "error": "Selector '#inventory_sidebar_link' found (1 elements) but none are visible"
+}

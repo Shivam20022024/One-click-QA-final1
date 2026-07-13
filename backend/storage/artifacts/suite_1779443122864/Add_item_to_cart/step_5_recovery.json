@@ -1,0 +1,7 @@
+{
+  "step_index": 4,
+  "action": "click",
+  "selector_used": ".add-to-cart",
+  "recovery_attempts": [],
+  "error": "Selector pre-validation failed for '.add-to-cart' on 'click': Healed selector semantic mismatch: original=.add-to-cart new=[placeholder*='add' i]"
+}

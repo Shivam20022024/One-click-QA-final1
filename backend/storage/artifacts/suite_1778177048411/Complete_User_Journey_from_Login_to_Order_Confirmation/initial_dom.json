@@ -1,0 +1,5 @@
+{
+  "test_name": "Complete User Journey from Login to Order Confirmation",
+  "base_url": "https://www.saucedemo.com",
+  "dom_elements": []
+}

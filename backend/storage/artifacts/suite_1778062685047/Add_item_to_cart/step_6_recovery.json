@@ -1,0 +1,13 @@
+{
+  "step_index": 5,
+  "action": "assert_visible",
+  "selector_used": "#root",
+  "recovery_attempts": [
+    {
+      "strategy": "llm",
+      "candidate": "#root",
+      "success": true
+    }
+  ],
+  "error": "Browser network error: net::ERR_FAILED"
+}

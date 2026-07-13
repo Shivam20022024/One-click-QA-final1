@@ -1,0 +1,7 @@
+{
+  "step_index": 5,
+  "action": "assert_text",
+  "selector_used": "span.shopping_cart_badge",
+  "recovery_attempts": [],
+  "error": "Browser network error: net::ERR_FAILED"
+}

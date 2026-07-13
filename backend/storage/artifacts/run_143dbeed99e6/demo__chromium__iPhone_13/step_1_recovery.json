@@ -1,0 +1,7 @@
+{
+  "step_index": 0,
+  "action": "click",
+  "selector_used": "goto",
+  "recovery_attempts": [],
+  "error": "Selector pre-validation failed for 'goto' on 'click': Selector not found"
+}

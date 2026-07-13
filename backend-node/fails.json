@@ -1,0 +1,106 @@
+[
+  {
+    "action": "assertText",
+    "status": "FAILED",
+    "time": "2026-05-29T09:44:06.611Z",
+    "durationMs": 35,
+    "details": "Assertion failed: expected h3[data-test='error'] to contain \"null\", but got \"Epic sadface: Username and password do not match any user in this service\"",
+    "value": "Epic sadface: Username and password do not match any user in this service",
+    "rawSelector": "h3[data-test='error']"
+  },
+  {
+    "action": "assertVisible",
+    "status": "FAILED",
+    "time": "2026-05-29T09:44:14.881Z",
+    "durationMs": 2053,
+    "details": "Selector not found in DOM: .cart_item",
+    "value": null,
+    "rawSelector": ".cart_item"
+  },
+  {
+    "action": "assertVisible",
+    "status": "FAILED",
+    "time": "2026-05-29T09:44:38.281Z",
+    "durationMs": 2041,
+    "details": "Selector not found in DOM: .cart_quantity",
+    "value": "0",
+    "rawSelector": ".cart_quantity"
+  },
+  {
+    "action": "fill",
+    "status": "FAILED",
+    "time": "2026-05-29T09:44:59.454Z",
+    "durationMs": 5049,
+    "details": "FILL_VERIFICATION_FAILED: Field did not accept the expected value",
+    "value": "12345",
+    "rawSelector": "input[name=\"postalCode\"]"
+  },
+  {
+    "action": "assertVisible",
+    "status": "FAILED",
+    "time": "2026-05-29T09:45:01.723Z",
+    "durationMs": 2046,
+    "details": "Selector not found in DOM: .complete-header",
+    "value": "Thank you for your order!",
+    "rawSelector": ".complete-header"
+  },
+  {
+    "action": "assertVisible",
+    "status": "FAILED",
+    "time": "2026-05-29T09:45:21.186Z",
+    "durationMs": 2027,
+    "details": "Selector not found in DOM: #inventory_container",
+    "value": null,
+    "rawSelector": "#inventory_container"
+  },
+  {
+    "action": "assertVisible",
+    "status": "FAILED",
+    "time": "2026-05-29T09:45:27.854Z",
+    "durationMs": 2022,
+    "details": "Selector not found in DOM: .bm-menu",
+    "value": null,
+    "rawSelector": ".bm-menu"
+  },
+  {
+    "action": "ACCESSIBILITY",
+    "status": "FAILED",
+    "time": "2026-05-29T09:45:28.156Z",
+    "durationMs": 0,
+    "details": "Violations found: 1"
+  },
+  {
+    "action": "assertVisible",
+    "status": "FAILED",
+    "time": "2026-05-29T09:45:48.885Z",
+    "durationMs": 2030,
+    "details": "Selector not found in DOM: #logout_sidebar_link",
+    "value": null,
+    "rawSelector": "#logout_sidebar_link"
+  },
+  {
+    "action": "assertVisible",
+    "status": "FAILED",
+    "time": "2026-05-29T09:45:56.265Z",
+    "durationMs": 2061,
+    "details": "Selector not found in DOM: #logout_sidebar_link",
+    "value": null,
+    "rawSelector": "#logout_sidebar_link"
+  },
+  {
+    "action": "assertVisible",
+    "status": "FAILED",
+    "time": "2026-05-29T09:45:58.846Z",
+    "durationMs": 2039,
+    "details": "Selector not found in DOM: input[name=\"username\"]",
+    "value": null,
+    "rawSelector": "input[name=\"username\"]"
+  },
+  {
+    "action": "EXECUTION_RESULT",
+    "status": "FAILED",
+    "time": "2026-05-29T09:46:44.817Z",
+    "details": "Execution Completed",
+    "value": "{\"accessibility\":{\"success\":true,\"violations\":[]},\"security\":{\"success\":true,\"issues\":{\"mixedContent\":false,\"missingHeaders\":[],\"insecureForms\":false}},\"scenario_status\":{\"Homepage and login validation\":\"PASS\",\"Invalid login testing\":\"FAIL\",\"Valid login testing\":\"PASS\",\"Product validation\":\"PASS\",\"Add to cart flow\":\"FAIL\",\"Remove product validation\":\"FAIL\",\"Checkout flow\":\"FAIL\",\"Order completion\":\"FAIL\",\"Navigation validation\":\"FAIL\",\"Menu validation\":\"FAIL\",\"Logout validation\":\"FAIL\",\"Back navigation validation\":\"FAIL\",\"UI validation\":\"FAIL\"},\"transcript\":[{\"action\":\"goto\",\"target\":\"https://www.saucedemo.com/\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Homepage and login validation\",\"timestamp\":\"2026-05-29T09:44:00.930Z\"},{\"action\":\"wait\",\"target\":\"#login-button\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Homepage and login validation\",\"timestamp\":\"2026-05-29T09:44:00.953Z\"},{\"action\":\"assertVisible\",\"target\":\"#user-name\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Homepage and login validation\",\"timestamp\":\"2026-05-29T09:44:01.042Z\"},{\"action\":\"assertVisible\",\"target\":\"#password\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Homepage and login validation\",\"timestamp\":\"2026-05-29T09:44:01.086Z\"},{\"action\":\"assertVisible\",\"target\":\"#login-button\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Homepage and login validation\",\"timestamp\":\"2026-05-29T09:44:01.130Z\"},{\"action\":\"assertVisible\",\"target\":\"div.login_credentials\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Homepage and login validation\",\"timestamp\":\"2026-05-29T09:44:01.176Z\"},{\"action\":\"goto\",\"target\":\"https://www.saucedemo.com/\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Invalid login testing\",\"timestamp\":\"2026-05-29T09:44:01.390Z\"},{\"action\":\"wait\",\"target\":\"#login-button\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Invalid login testing\",\"timestamp\":\"2026-05-29T09:44:01.392Z\"},{\"action\":\"fill\",\"target\":\"#user-name\",\"value\":\"invalid_user\",\"status\":\"SUCCESS\",\"scenarioName\":\"Invalid login testing\",\"timestamp\":\"2026-05-29T09:44:03.573Z\"},{\"action\":\"fill\",\"target\":\"#password\",\"value\":\"invalid_password\",\"status\":\"SUCCESS\",\"scenarioName\":\"Invalid login testing\",\"timestamp\":\"2026-05-29T09:44:05.975Z\"},{\"action\":\"click\",\"target\":\"#login-button\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Invalid login testing\",\"timestamp\":\"2026-05-29T09:44:06.529Z\"},{\"action\":\"wait\",\"target\":\"h3[data-test='error']\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Invalid login testing\",\"timestamp\":\"2026-05-29T09:44:06.530Z\"},{\"action\":\"assertVisible\",\"target\":\"h3[data-test='error']\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Invalid login testing\",\"timestamp\":\"2026-05-29T09:44:06.576Z\"},{\"action\":\"assertText\",\"target\":\"h3[data-test='error']\",\"value\":\"Assertion failed: expected h3[data-test='error'] to contain \\\"null\\\", but got \\\"Epic sadface: Username and password do not match any user in this service\\\"\",\"status\":\"FAILED\",\"scenarioName\":\"Invalid login testing\",\"timestamp\":\"2026-05-29T09:44:06.611Z\"},{\"action\":\"goto\",\"target\":\"https://www.saucedemo.com/\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Valid login testing\",\"timestamp\":\"2026-05-29T09:44:06.876Z\"},{\"action\":\"wait\",\"target\":\"#login-button\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Valid login testing\",\"timestamp\":\"2026-05-29T09:44:06.879Z\"},{\"action\":\"fill\",\"target\":\"#user-name\",\"value\":\"standard_user\",\"status\":\"SUCCESS\",\"scenarioName\":\"Valid login testing\",\"timestamp\":\"2026-05-29T09:44:08.985Z\"},{\"action\":\"fill\",\"target\":\"#password\",\"value\":\"secret_sauce\",\"status\":\"SUCCESS\",\"scenarioName\":\"Valid login testing\",\"timestamp\":\"2026-05-29T09:44:11.041Z\"},{\"action\":\"click\",\"target\":\"#login-button\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Valid login testing\",\"timestamp\":\"2026-05-29T09:44:11.795Z\"},{\"action\":\"wait\",\"target\":\".inventory_list\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Valid login testing\",\"timestamp\":\"2026-05-29T09:44:11.796Z\"},{\"action\":\"assertVisible\",\"target\":\".inventory_list\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Valid login testing\",\"timestamp\":\"2026-05-29T09:44:11.846Z\"},{\"action\":\"goto\",\"target\":\"https://www.saucedemo.com/inventory.html\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Product validation\",\"timestamp\":\"2026-05-29T09:44:12.223Z\"},{\"action\":\"wait\",\"target\":\".inventory_item\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Product validation\",\"timestamp\":\"2026-05-29T09:44:12.227Z\"},{\"action\":\"assertVisible\",\"target\":\".inventory_item\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Product validation\",\"timestamp\":\"2026-05-29T09:44:12.303Z\"},{\"action\":\"assertVisible\",\"target\":\".inventory_item_name\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Product validation\",\"timestamp\":\"2026-05-29T09:44:12.344Z\"},{\"action\":\"assertVisible\",\"target\":\".inventory_item_price\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Product validation\",\"timestamp\":\"2026-05-29T09:44:12.393Z\"},{\"action\":\"assertVisible\",\"target\":\".btn_inventory\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Product validation\",\"timestamp\":\"2026-05-29T09:44:12.430Z\"},{\"action\":\"goto\",\"target\":\"https://www.saucedemo.com/cart.html\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Add to cart flow\",\"timestamp\":\"2026-05-29T09:44:12.826Z\"},{\"action\":\"wait\",\"target\":\".cart_item\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Add to cart flow\",\"timestamp\":\"2026-05-29T09:44:12.828Z\"},{\"action\":\"assertVisible\",\"target\":\".cart_item\",\"value\":\"Selector not found in DOM: .cart_item\",\"status\":\"FAILED\",\"scenarioName\":\"Add to cart flow\",\"timestamp\":\"2026-05-29T09:44:14.882Z\"},{\"action\":\"goto\",\"target\":\"https://www.saucedemo.com/\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Remove product validation\",\"timestamp\":\"2026-05-29T09:44:32.221Z\"},{\"action\":\"wait\",\"target\":\"#shopping_cart_container\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Remove product validation\",\"timestamp\":\"2026-05-29T09:44:32.223Z\"},{\"action\":\"click\",\"target\":\"#remove-sauce-labs-backpack\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Remove product validation\",\"timestamp\":\"2026-05-29T09:44:36.238Z\"},{\"action\":\"wait\",\"target\":\"#shopping_cart_container\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Remove product validation\",\"timestamp\":\"2026-05-29T09:44:36.240Z\"},{\"action\":\"assertVisible\",\"target\":\".cart_quantity\",\"value\":\"Selector not found in DOM: .cart_quantity\",\"status\":\"FAILED\",\"scenarioName\":\"Remove product validation\",\"timestamp\":\"2026-05-29T09:44:38.281Z\"},{\"action\":\"goto\",\"target\":\"https://www.saucedemo.com/\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Checkout flow\",\"timestamp\":\"2026-05-29T09:44:38.476Z\"},{\"action\":\"wait\",\"target\":\"#checkout\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Checkout flow\",\"timestamp\":\"2026-05-29T09:44:38.479Z\"},{\"action\":\"click\",\"target\":\"#checkout\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Checkout flow\",\"timestamp\":\"2026-05-29T09:44:43.784Z\"},{\"action\":\"wait\",\"target\":\".checkout_info\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Checkout flow\",\"timestamp\":\"2026-05-29T09:44:43.788Z\"},{\"action\":\"fill\",\"target\":\"input[name=\\\"firstName\\\"]\",\"value\":\"John\",\"status\":\"SUCCESS\",\"scenarioName\":\"Checkout flow\",\"timestamp\":\"2026-05-29T09:44:49.062Z\"},{\"action\":\"click\",\"target\":\"input[name=\\\"lastName\\\"]\",\"value\":\"Doe\",\"status\":\"SUCCESS\",\"scenarioName\":\"Checkout flow\",\"timestamp\":\"2026-05-29T09:44:54.405Z\"},{\"action\":\"fill\",\"target\":\"input[name=\\\"postalCode\\\"]\",\"value\":\"FILL_VERIFICATION_FAILED: Field did not accept the expected value\",\"status\":\"FAILED\",\"scenarioName\":\"Checkout flow\",\"timestamp\":\"2026-05-29T09:44:59.454Z\"},{\"action\":\"goto\",\"target\":\"https://www.saucedemo.com/\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Order completion\",\"timestamp\":\"2026-05-29T09:44:59.676Z\"},{\"action\":\"wait\",\"target\":\".complete-header\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Order completion\",\"timestamp\":\"2026-05-29T09:44:59.677Z\"},{\"action\":\"assertVisible\",\"target\":\".complete-header\",\"value\":\"Selector not found in DOM: .complete-header\",\"status\":\"FAILED\",\"scenarioName\":\"Order completion\",\"timestamp\":\"2026-05-29T09:45:01.723Z\"},{\"action\":\"goto\",\"target\":\"https://www.saucedemo.com/\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Navigation validation\",\"timestamp\":\"2026-05-29T09:45:02.354Z\"},{\"action\":\"wait\",\"target\":\"#inventory_container\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Navigation validation\",\"timestamp\":\"2026-05-29T09:45:02.358Z\"},{\"action\":\"click\",\"target\":\"#inventory_container a[href=\\\"/cart.html\\\"]\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Navigation validation\",\"timestamp\":\"2026-05-29T09:45:07.048Z\"},{\"action\":\"wait\",\"target\":\"#cart_contents_container\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Navigation validation\",\"timestamp\":\"2026-05-29T09:45:07.053Z\"},{\"action\":\"click\",\"target\":\"#checkout\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Navigation validation\",\"timestamp\":\"2026-05-29T09:45:14.106Z\"},{\"action\":\"wait\",\"target\":\".checkout_info\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Navigation validation\",\"timestamp\":\"2026-05-29T09:45:14.109Z\"},{\"action\":\"click\",\"target\":\"#back-to-products\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Navigation validation\",\"timestamp\":\"2026-05-29T09:45:19.156Z\"},{\"action\":\"wait\",\"target\":\"#inventory_container\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Navigation validation\",\"timestamp\":\"2026-05-29T09:45:19.158Z\"},{\"action\":\"assertVisible\",\"target\":\"#inventory_container\",\"value\":\"Selector not found in DOM: #inventory_container\",\"status\":\"FAILED\",\"scenarioName\":\"Navigation validation\",\"timestamp\":\"2026-05-29T09:45:21.186Z\"},{\"action\":\"goto\",\"target\":\"https://www.saucedemo.com/\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Menu validation\",\"timestamp\":\"2026-05-29T09:45:21.374Z\"},{\"action\":\"wait\",\"target\":\"#react-burger-menu-btn\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Menu validation\",\"timestamp\":\"2026-05-29T09:45:21.375Z\"},{\"action\":\"click\",\"target\":\"#react-burger-menu-btn\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Menu validation\",\"timestamp\":\"2026-05-29T09:45:25.828Z\"},{\"action\":\"wait\",\"target\":\".bm-menu\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Menu validation\",\"timestamp\":\"2026-05-29T09:45:25.832Z\"},{\"action\":\"assertVisible\",\"target\":\".bm-menu\",\"value\":\"Selector not found in DOM: .bm-menu\",\"status\":\"FAILED\",\"scenarioName\":\"Menu validation\",\"timestamp\":\"2026-05-29T09:45:27.854Z\"},{\"action\":\"goto\",\"target\":\"https://www.saucedemo.com/\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Logout validation\",\"timestamp\":\"2026-05-29T09:45:39.696Z\"},{\"action\":\"click\",\"target\":\"#react-burger-menu-btn\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Logout validation\",\"timestamp\":\"2026-05-29T09:45:46.855Z\"},{\"action\":\"assertVisible\",\"target\":\"#logout_sidebar_link\",\"value\":\"Selector not found in DOM: #logout_sidebar_link\",\"status\":\"FAILED\",\"scenarioName\":\"Logout validation\",\"timestamp\":\"2026-05-29T09:45:48.885Z\"},{\"action\":\"goto\",\"target\":\"https://www.saucedemo.com/\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Back navigation validation\",\"timestamp\":\"2026-05-29T09:45:49.140Z\"},{\"action\":\"click\",\"target\":\"#react-burger-menu-btn\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Back navigation validation\",\"timestamp\":\"2026-05-29T09:45:54.204Z\"},{\"action\":\"assertVisible\",\"target\":\"#logout_sidebar_link\",\"value\":\"Selector not found in DOM: #logout_sidebar_link\",\"status\":\"FAILED\",\"scenarioName\":\"Back navigation validation\",\"timestamp\":\"2026-05-29T09:45:56.265Z\"},{\"action\":\"goto\",\"target\":\"https://www.saucedemo.com/\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"UI validation\",\"timestamp\":\"2026-05-29T09:45:56.668Z\"},{\"action\":\"assertVisible\",\"target\":\"#user-name\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"UI validation\",\"timestamp\":\"2026-05-29T09:45:56.757Z\"},{\"action\":\"assertVisible\",\"target\":\"#login-button\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"UI validation\",\"timestamp\":\"2026-05-29T09:45:56.807Z\"},{\"action\":\"assertVisible\",\"target\":\"input[name=\\\"username\\\"]\",\"value\":\"Selector not found in DOM: input[name=\\\"username\\\"]\",\"status\":\"FAILED\",\"scenarioName\":\"UI validation\",\"timestamp\":\"2026-05-29T09:45:58.846Z\"}],\"metrics\":{\"requested_count\":13,\"executed_count\":13,\"passed_count\":3,\"failed_count\":10,\"skipped_count\":0}}"
+  }
+]

@@ -1,0 +1,7 @@
+{
+  "step_index": 11,
+  "action": "assert_visible",
+  "selector_used": ".error-message-container",
+  "recovery_attempts": [],
+  "error": "Selector pre-validation failed for '.error-message-container' on 'assert_visible': Selector not found"
+}

@@ -1,0 +1,52 @@
+{
+  "features_discovered": [
+    "Dashboard"
+  ],
+  "features_tested": [],
+  "pass_fail": [
+    {
+      "feature": "Login Flow",
+      "status": "PASS"
+    },
+    {
+      "feature": "Projects Page Load",
+      "status": "PASS"
+    },
+    {
+      "feature": "Create Project",
+      "status": "PASS"
+    },
+    {
+      "feature": "Suites Page Load",
+      "status": "PASS"
+    },
+    {
+      "feature": "Create Suite",
+      "status": "PASS"
+    },
+    {
+      "feature": "Test Cases Load",
+      "status": "PASS"
+    },
+    {
+      "feature": "AI Builder Page Load",
+      "status": "PASS"
+    },
+    {
+      "feature": "Execution Page Load",
+      "status": "PASS"
+    },
+    {
+      "feature": "Execution Button Present",
+      "status": "PASS"
+    },
+    {
+      "feature": "Schedules Page Load",
+      "status": "PASS"
+    }
+  ],
+  "dead_buttons": [],
+  "broken_apis": [],
+  "console_errors": [],
+  "bugs": []
+}

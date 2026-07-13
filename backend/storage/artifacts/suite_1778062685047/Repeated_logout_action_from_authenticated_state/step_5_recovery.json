@@ -1,0 +1,13 @@
+{
+  "step_index": 4,
+  "action": "click",
+  "selector_used": "#login-button",
+  "recovery_attempts": [
+    {
+      "strategy": "llm",
+      "candidate": "#login-button",
+      "success": true
+    }
+  ],
+  "error": "Browser network error: net::ERR_ABORTED"
+}

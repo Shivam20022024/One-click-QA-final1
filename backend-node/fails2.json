@@ -1,0 +1,91 @@
+[
+  {
+    "action": "ACCESSIBILITY",
+    "status": "FAILED",
+    "time": "2026-05-29T10:13:42.538Z",
+    "durationMs": 0,
+    "details": "Violations found: 1"
+  },
+  {
+    "action": "assertText",
+    "status": "FAILED",
+    "time": "2026-05-29T10:13:54.816Z",
+    "durationMs": 2033,
+    "details": "Selector not found in DOM: [data-testid='shopping-cart-badge']",
+    "value": "2",
+    "rawSelector": "[data-testid='shopping-cart-badge']"
+  },
+  {
+    "action": "assertVisible",
+    "status": "FAILED",
+    "time": "2026-05-29T10:14:01.775Z",
+    "durationMs": 2033,
+    "details": "Selector not found in DOM: [data-testid='cart-item'][data-item-name='Sauce Labs Backpack']",
+    "value": null,
+    "rawSelector": "[data-testid='cart-item'][data-item-name='Sauce Labs Backpack']"
+  },
+  {
+    "action": "assertVisible",
+    "status": "FAILED",
+    "time": "2026-05-29T10:14:08.328Z",
+    "durationMs": 2019,
+    "details": "Selector not found in DOM: [data-testid='cart-item'][data-item-name='Sauce Labs Backpack']",
+    "value": null,
+    "rawSelector": "[data-testid='cart-item'][data-item-name='Sauce Labs Backpack']"
+  },
+  {
+    "action": "ACCESSIBILITY",
+    "status": "FAILED",
+    "time": "2026-05-29T10:14:14.240Z",
+    "durationMs": 0,
+    "details": "Violations found: 1"
+  },
+  {
+    "action": "assertVisible",
+    "status": "FAILED",
+    "time": "2026-05-29T10:14:46.703Z",
+    "durationMs": 2020,
+    "details": "Selector not found in DOM: [data-testid='checkout-overview']",
+    "value": null,
+    "rawSelector": "[data-testid='checkout-overview']"
+  },
+  {
+    "action": "assertVisible",
+    "status": "FAILED",
+    "time": "2026-05-29T10:14:53.661Z",
+    "durationMs": 2019,
+    "details": "Selector not found in DOM: [data-testid='success-message']",
+    "value": null,
+    "rawSelector": "[data-testid='success-message']"
+  },
+  {
+    "action": "ACCESSIBILITY",
+    "status": "FAILED",
+    "time": "2026-05-29T10:14:53.948Z",
+    "durationMs": 0,
+    "details": "Violations found: 1"
+  },
+  {
+    "action": "assertVisible",
+    "status": "FAILED",
+    "time": "2026-05-29T10:15:09.857Z",
+    "durationMs": 2020,
+    "details": "Selector not found in DOM: [data-testid=\"login-button\"]",
+    "value": null,
+    "rawSelector": "[data-testid=\"login-button\"]"
+  },
+  {
+    "action": "ACCESSIBILITY",
+    "status": "FAILED",
+    "time": "2026-05-29T10:15:10.306Z",
+    "durationMs": 0,
+    "details": "Violations found: 1"
+  },
+  {
+    "action": "EXECUTION_RESULT",
+    "status": "FAILED",
+    "time": "2026-05-29T10:15:52.013Z",
+    "details": "Execution Completed",
+    "value": "{\"accessibility\":{\"success\":false,\"violations\":[{\"id\":\"button-name\",\"impact\":\"critical\",\"description\":\"Ensure buttons have discernible text\",\"nodes\":1}]},\"security\":{\"success\":true,\"issues\":{\"mixedContent\":false,\"missingHeaders\":[],\"insecureForms\":false}},\"scenario_status\":{\"Navigate to the homepage\":\"PASS\",\"Log in with a valid standard user account\":\"PASS\",\"Verify that the login was successful\":\"PASS\",\"Add the \\\"Sauce Labs Backpack\\\" to the shopping cart\":\"PASS\",\"Add the \\\"Sauce Labs Bike Light\\\" to the shopping cart\":\"PASS\",\"Verify that the shopping cart badge displays \\\"2\\\" items\":\"FAIL\",\"Click the shopping cart icon to navigate to the cart page\":\"PASS\",\"Verify that both items are visible in the cart list\":\"FAIL\",\"Remove the \\\"Sauce Labs Bike Light\\\" from the cart\":\"FAIL\",\"Click the \\\"Checkout\\\" button to proceed\":\"PASS\",\"Fill in the checkout information\":\"PASS\",\"Click the 'Continue' button\":\"PASS\",\"Verify checkout overview page\":\"FAIL\",\"Click the 'Finish' button\":\"PASS\",\"Verify success message\":\"FAIL\",\"Click the hamburger menu icon\":\"PASS\",\"Click the 'Logout' link\":\"FAIL\"},\"transcript\":[{\"action\":\"goto\",\"target\":\"https://www.saucedemo.com/\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Navigate to the homepage\",\"timestamp\":\"2026-05-29T10:13:23.010Z\"},{\"action\":\"wait\",\"target\":\"#user-name\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Log in with a valid standard user account\",\"timestamp\":\"2026-05-29T10:13:23.022Z\"},{\"action\":\"fill\",\"target\":\"#user-name\",\"value\":\"standard_user\",\"status\":\"SUCCESS\",\"scenarioName\":\"Log in with a valid standard user account\",\"timestamp\":\"2026-05-29T10:13:24.992Z\"},{\"action\":\"wait\",\"target\":\"#password\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Log in with a valid standard user account\",\"timestamp\":\"2026-05-29T10:13:24.996Z\"},{\"action\":\"fill\",\"target\":\"#password\",\"value\":\"secret_sauce\",\"status\":\"SUCCESS\",\"scenarioName\":\"Log in with a valid standard user account\",\"timestamp\":\"2026-05-29T10:13:27.157Z\"},{\"action\":\"wait\",\"target\":\"#login-button\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Log in with a valid standard user account\",\"timestamp\":\"2026-05-29T10:13:27.160Z\"},{\"action\":\"click\",\"target\":\"#login-button\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Log in with a valid standard user account\",\"timestamp\":\"2026-05-29T10:13:29.621Z\"},{\"action\":\"wait\",\"target\":\"/inventory.html\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Verify that the login was successful\",\"timestamp\":\"2026-05-29T10:13:29.624Z\"},{\"action\":\"assertVisible\",\"target\":\".inventory_list\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Verify that the login was successful\",\"timestamp\":\"2026-05-29T10:13:29.729Z\"},{\"action\":\"wait\",\"target\":\".inventory_item[data-test='sauce-labs-backpack']\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Add the \\\"Sauce Labs Backpack\\\" to the shopping cart\",\"timestamp\":\"2026-05-29T10:13:29.732Z\"},{\"action\":\"click\",\"target\":\".inventory_item[data-test='sauce-labs-backpack'] .btn_primary\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Add the \\\"Sauce Labs Backpack\\\" to the shopping cart\",\"timestamp\":\"2026-05-29T10:13:35.678Z\"},{\"action\":\"wait\",\"target\":\".shopping_cart_badge\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Add the \\\"Sauce Labs Backpack\\\" to the shopping cart\",\"timestamp\":\"2026-05-29T10:13:35.681Z\"},{\"action\":\"wait\",\"target\":\".inventory_item[data-test='sauce-labs-bike-light']\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Add the \\\"Sauce Labs Bike Light\\\" to the shopping cart\",\"timestamp\":\"2026-05-29T10:13:35.687Z\"},{\"action\":\"click\",\"target\":\".inventory_item[data-test='sauce-labs-bike-light'] .btn_primary\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Add the \\\"Sauce Labs Bike Light\\\" to the shopping cart\",\"timestamp\":\"2026-05-29T10:13:41.494Z\"},{\"action\":\"wait\",\"target\":\".shopping_cart_badge\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Add the \\\"Sauce Labs Bike Light\\\" to the shopping cart\",\"timestamp\":\"2026-05-29T10:13:41.495Z\"},{\"action\":\"goto\",\"target\":\"https://www.saucedemo.com/\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Verify that the shopping cart badge displays \\\"2\\\" items\",\"timestamp\":\"2026-05-29T10:13:52.780Z\"},{\"action\":\"wait\",\"target\":\"[data-testid='shopping-cart-badge']\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Verify that the shopping cart badge displays \\\"2\\\" items\",\"timestamp\":\"2026-05-29T10:13:52.783Z\"},{\"action\":\"assertText\",\"target\":\"[data-testid='shopping-cart-badge']\",\"value\":\"Selector not found in DOM: [data-testid='shopping-cart-badge']\",\"status\":\"FAILED\",\"scenarioName\":\"Verify that the shopping cart badge displays \\\"2\\\" items\",\"timestamp\":\"2026-05-29T10:13:54.817Z\"},{\"action\":\"goto\",\"target\":\"https://www.saucedemo.com/\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Click the shopping cart icon to navigate to the cart page\",\"timestamp\":\"2026-05-29T10:13:54.976Z\"},{\"action\":\"wait\",\"target\":\"[data-testid='shopping-cart']\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Click the shopping cart icon to navigate to the cart page\",\"timestamp\":\"2026-05-29T10:13:54.978Z\"},{\"action\":\"click\",\"target\":\"[data-testid='shopping-cart']\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Click the shopping cart icon to navigate to the cart page\",\"timestamp\":\"2026-05-29T10:13:59.742Z\"},{\"action\":\"wait\",\"target\":\"[data-testid='cart-list']\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Verify that both items are visible in the cart list\",\"timestamp\":\"2026-05-29T10:13:59.742Z\"},{\"action\":\"assertVisible\",\"target\":\"[data-testid='cart-item'][data-item-name='Sauce Labs Backpack']\",\"value\":\"Selector not found in DOM: [data-testid='cart-item'][data-item-name='Sauce Labs Backpack']\",\"status\":\"FAILED\",\"scenarioName\":\"Verify that both items are visible in the cart list\",\"timestamp\":\"2026-05-29T10:14:01.775Z\"},{\"action\":\"click\",\"target\":\"[data-testid='remove-sauce-labs-bike-light']\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Remove the \\\"Sauce Labs Bike Light\\\" from the cart\",\"timestamp\":\"2026-05-29T10:14:06.308Z\"},{\"action\":\"wait\",\"target\":\"[data-testid='cart-list']\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Remove the \\\"Sauce Labs Bike Light\\\" from the cart\",\"timestamp\":\"2026-05-29T10:14:06.309Z\"},{\"action\":\"assertVisible\",\"target\":\"[data-testid='cart-item'][data-item-name='Sauce Labs Backpack']\",\"value\":\"Selector not found in DOM: [data-testid='cart-item'][data-item-name='Sauce Labs Backpack']\",\"status\":\"FAILED\",\"scenarioName\":\"Remove the \\\"Sauce Labs Bike Light\\\" from the cart\",\"timestamp\":\"2026-05-29T10:14:08.328Z\"},{\"action\":\"click\",\"target\":\"[data-testid='checkout-button']\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Click the \\\"Checkout\\\" button to proceed\",\"timestamp\":\"2026-05-29T10:14:13.864Z\"},{\"action\":\"wait\",\"target\":\"[data-testid='checkout-page']\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Click the \\\"Checkout\\\" button to proceed\",\"timestamp\":\"2026-05-29T10:14:13.866Z\"},{\"action\":\"goto\",\"target\":\"https://www.saucedemo.com/\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Fill in the checkout information\",\"timestamp\":\"2026-05-29T10:14:24.226Z\"},{\"action\":\"wait\",\"target\":\"[data-testid='first-name']\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Fill in the checkout information\",\"timestamp\":\"2026-05-29T10:14:24.228Z\"},{\"action\":\"fill\",\"target\":\"[data-testid='first-name']\",\"value\":\"John\",\"status\":\"SUCCESS\",\"scenarioName\":\"Fill in the checkout information\",\"timestamp\":\"2026-05-29T10:14:29.279Z\"},{\"action\":\"wait\",\"target\":\"[data-testid='last-name']\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Fill in the checkout information\",\"timestamp\":\"2026-05-29T10:14:29.283Z\"},{\"action\":\"click\",\"target\":\"[data-testid='last-name']\",\"value\":\"Doe\",\"status\":\"SUCCESS\",\"scenarioName\":\"Fill in the checkout information\",\"timestamp\":\"2026-05-29T10:14:35.471Z\"},{\"action\":\"wait\",\"target\":\"[data-testid='postal-code']\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Fill in the checkout information\",\"timestamp\":\"2026-05-29T10:14:35.472Z\"},{\"action\":\"click\",\"target\":\"[data-testid='postal-code']\",\"value\":\"12345\",\"status\":\"SUCCESS\",\"scenarioName\":\"Fill in the checkout information\",\"timestamp\":\"2026-05-29T10:14:39.839Z\"},{\"action\":\"wait\",\"target\":\"[data-testid='continue']\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Click the 'Continue' button\",\"timestamp\":\"2026-05-29T10:14:39.840Z\"},{\"action\":\"click\",\"target\":\"[data-testid='continue']\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Click the 'Continue' button\",\"timestamp\":\"2026-05-29T10:14:44.681Z\"},{\"action\":\"wait\",\"target\":\"[data-testid='checkout-overview']\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Verify checkout overview page\",\"timestamp\":\"2026-05-29T10:14:44.683Z\"},{\"action\":\"assertVisible\",\"target\":\"[data-testid='checkout-overview']\",\"value\":\"Selector not found in DOM: [data-testid='checkout-overview']\",\"status\":\"FAILED\",\"scenarioName\":\"Verify checkout overview page\",\"timestamp\":\"2026-05-29T10:14:46.703Z\"},{\"action\":\"wait\",\"target\":\"[data-testid='finish']\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Click the 'Finish' button\",\"timestamp\":\"2026-05-29T10:14:46.704Z\"},{\"action\":\"click\",\"target\":\"[data-testid='finish']\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Click the 'Finish' button\",\"timestamp\":\"2026-05-29T10:14:51.641Z\"},{\"action\":\"wait\",\"target\":\"[data-testid='success-message']\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Verify success message\",\"timestamp\":\"2026-05-29T10:14:51.642Z\"},{\"action\":\"assertVisible\",\"target\":\"[data-testid='success-message']\",\"value\":\"Selector not found in DOM: [data-testid='success-message']\",\"status\":\"FAILED\",\"scenarioName\":\"Verify success message\",\"timestamp\":\"2026-05-29T10:14:53.661Z\"},{\"action\":\"goto\",\"target\":\"https://www.saucedemo.com/\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Click the hamburger menu icon\",\"timestamp\":\"2026-05-29T10:14:58.238Z\"},{\"action\":\"wait\",\"target\":\"[data-testid=\\\"hamburger-icon\\\"]\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Click the hamburger menu icon\",\"timestamp\":\"2026-05-29T10:14:58.242Z\"},{\"action\":\"click\",\"target\":\"[data-testid=\\\"hamburger-icon\\\"]\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Click the hamburger menu icon\",\"timestamp\":\"2026-05-29T10:15:02.823Z\"},{\"action\":\"wait\",\"target\":\"[data-testid=\\\"logout-link\\\"]\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Click the 'Logout' link\",\"timestamp\":\"2026-05-29T10:15:02.825Z\"},{\"action\":\"click\",\"target\":\"[data-testid=\\\"logout-link\\\"]\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Click the 'Logout' link\",\"timestamp\":\"2026-05-29T10:15:07.835Z\"},{\"action\":\"wait\",\"target\":\"[data-testid=\\\"login-button\\\"]\",\"value\":null,\"status\":\"SUCCESS\",\"scenarioName\":\"Click the 'Logout' link\",\"timestamp\":\"2026-05-29T10:15:07.837Z\"},{\"action\":\"assertVisible\",\"target\":\"[data-testid=\\\"login-button\\\"]\",\"value\":\"Selector not found in DOM: [data-testid=\\\"login-button\\\"]\",\"status\":\"FAILED\",\"scenarioName\":\"Click the 'Logout' link\",\"timestamp\":\"2026-05-29T10:15:09.857Z\"}],\"metrics\":{\"requested_count\":17,\"executed_count\":17,\"passed_count\":11,\"failed_count\":6,\"skipped_count\":0}}"
+  }
+]

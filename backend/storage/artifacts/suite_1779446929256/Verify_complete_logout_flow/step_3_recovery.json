@@ -1,0 +1,7 @@
+{
+  "step_index": 2,
+  "action": "fill",
+  "selector_used": "input[name=\"your-email\"]",
+  "recovery_attempts": [],
+  "error": "fill failed on 'text=your': Locator.wait_for: Error: strict mode violation: locator(\"text=your\") resolved to 5 elements:\n    1) <h4 class=\"elementor-heading-title elementor-size-de\u2026>\u2026</h4> aka get_by_role(\"heading\", name=\"Demystify modern data\")\n    2) <p>We know what it takes to transform your business \u2026</p> aka get_by_text(\"We know what it takes to\")\n    3) <h2 class=\"elementor-heading-title elementor-size-de\u2026>We Elevate Your Business to New Heights.\u21b5</h2> aka get_by_text(\"We Elevate Your Business to\")\n    4) <span class=\"elementor-icon-list-text\">Accelerate your value realization</span> aka get_by_text(\"Accelerate your value\")\n    5) <p class=\"elementor-heading-title elementor-size-de\u2026>As your partners in business transformation, we s\u2026</p> aka get_by_text(\"As your partners in business\")\n\nCall log:\nwaiting for locator(\"text=your\") to be visible\n"
+}

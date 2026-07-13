@@ -1,0 +1,7 @@
+{
+  "step_index": 1,
+  "action": "fill",
+  "selector_used": "#password",
+  "recovery_attempts": [],
+  "error": "Selector pre-validation failed for '#password' on 'fill': Selector not found"
+}

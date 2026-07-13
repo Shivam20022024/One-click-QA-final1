@@ -1,0 +1,222 @@
+{
+  "application": "LambdaTest Automation",
+  "application_map": {
+    "pages": [
+      "Login Page",
+      "Account Page",
+      "Checkout Page"
+    ],
+    "features": [
+      "User Authentication",
+      "Account Management",
+      "Checkout Process"
+    ],
+    "flows": [
+      "Login Flow",
+      "Account Details Flow",
+      "Checkout Flow"
+    ]
+  },
+  "test_suite": {
+    "tests": [
+      {
+        "feature": "User Authentication",
+        "test_type": "positive",
+        "test_name": "Successful Login with Valid Credentials",
+        "expected_intent": "success",
+        "steps": [
+          {
+            "action": "goto",
+            "url": "https://automation.lambdatest.com/configure",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "validuser@example.com",
+            "selector": "#email",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "validpassword",
+            "selector": "#password",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "#login-button",
+            "expected_intent": "success"
+          },
+          {
+            "action": "assert_visible",
+            "selector": "Account Page",
+            "expected_intent": "success"
+          }
+        ]
+      },
+      {
+        "feature": "User Authentication",
+        "test_type": "negative",
+        "test_name": "Failed Login with Invalid Credentials",
+        "expected_intent": "error",
+        "steps": [
+          {
+            "action": "goto",
+            "url": "https://automation.lambdatest.com/configure",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "invaliduser@example.com",
+            "selector": "#email",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "invalidpassword",
+            "selector": "#password",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "#login-button",
+            "expected_intent": "success"
+          },
+          {
+            "action": "assert_visible",
+            "selector": "Login Error Message",
+            "expected_intent": "error"
+          }
+        ]
+      },
+      {
+        "feature": "User Authentication",
+        "test_type": "edge",
+        "test_name": "Login with Empty Credentials",
+        "expected_intent": "validation",
+        "steps": [
+          {
+            "action": "goto",
+            "url": "https://automation.lambdatest.com/configure",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "#login-button",
+            "expected_intent": "success"
+          },
+          {
+            "action": "assert_visible",
+            "selector": "Email Address is required",
+            "expected_intent": "validation"
+          }
+        ]
+      },
+      {
+        "feature": "Account Management",
+        "test_type": "positive",
+        "test_name": "View Account Details After Login",
+        "expected_intent": "success",
+        "steps": [
+          {
+            "action": "goto",
+            "url": "https://automation.lambdatest.com/configure",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "validuser@example.com",
+            "selector": "#email",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "validpassword",
+            "selector": "#password",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "#login-button",
+            "expected_intent": "success"
+          },
+          {
+            "action": "assert_visible",
+            "selector": "Account Details Section",
+            "expected_intent": "success"
+          }
+        ]
+      },
+      {
+        "feature": "Account Management",
+        "test_type": "negative",
+        "test_name": "Access Account Details Without Login",
+        "expected_intent": "error",
+        "steps": [
+          {
+            "action": "goto",
+            "url": "https://automation.lambdatest.com/account",
+            "expected_intent": "success"
+          },
+          {
+            "action": "assert_visible",
+            "selector": "Login Required Message",
+            "expected_intent": "error"
+          }
+        ]
+      },
+      {
+        "feature": "Checkout Process",
+        "test_type": "e2e",
+        "test_name": "Complete Checkout Process Successfully",
+        "expected_intent": "success",
+        "steps": [
+          {
+            "action": "goto",
+            "url": "https://automation.lambdatest.com/configure",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "validuser@example.com",
+            "selector": "#email",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "validpassword",
+            "selector": "#password",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "#login-button",
+            "expected_intent": "success"
+          },
+          {
+            "action": "goto",
+            "url": "https://automation.lambdatest.com/checkout",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "123 Test St",
+            "selector": "#shipping-address",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "#checkout-button",
+            "expected_intent": "success"
+          },
+          {
+            "action": "assert_visible",
+            "selector": "Checkout Success Message",
+            "expected_intent": "success"
+          }
+        ]
+      }
+    ]
+  },
+  "base_url": "https://automation.lambdatest.com/configure"
+}

@@ -1,0 +1,128 @@
+{
+  "application": "Novalantis",
+  "application_map": {
+    "pages": [
+      "Home",
+      "Logout"
+    ],
+    "features": [
+      "User Authentication"
+    ],
+    "flows": [
+      "User Logout Flow"
+    ]
+  },
+  "test_suite": {
+    "tests": [
+      {
+        "feature": "User Authentication",
+        "test_type": "positive",
+        "test_name": "Verify successful logout",
+        "expected_intent": "success",
+        "steps": [
+          {
+            "action": "goto",
+            "url": "https://novalantis.com/",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "text=LOGOUT",
+            "expected_intent": "success"
+          },
+          {
+            "action": "assert_visible",
+            "selector": "text=You have been logged out",
+            "expected_intent": "success"
+          }
+        ]
+      },
+      {
+        "feature": "User Authentication",
+        "test_type": "negative",
+        "test_name": "Verify logout without being logged in",
+        "expected_intent": "error",
+        "steps": [
+          {
+            "action": "goto",
+            "url": "https://novalantis.com/",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "text=LOGOUT",
+            "expected_intent": "success"
+          },
+          {
+            "action": "assert_visible",
+            "selector": "text=You are not logged in",
+            "expected_intent": "error"
+          }
+        ]
+      },
+      {
+        "feature": "User Authentication",
+        "test_type": "edge",
+        "test_name": "Verify logout with session timeout",
+        "expected_intent": "validation",
+        "steps": [
+          {
+            "action": "goto",
+            "url": "https://novalantis.com/",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "text=LOGOUT",
+            "expected_intent": "success"
+          },
+          {
+            "action": "assert_visible",
+            "selector": "text=Session has expired",
+            "expected_intent": "validation"
+          }
+        ]
+      },
+      {
+        "feature": "User Authentication",
+        "test_type": "e2e",
+        "test_name": "Verify complete logout flow",
+        "expected_intent": "success",
+        "steps": [
+          {
+            "action": "goto",
+            "url": "https://novalantis.com/",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "text=LOGIN",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "user@example.com",
+            "selector": "input[name=\"your-email\"]",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "input[type=\"submit\"]",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "text=LOGOUT",
+            "expected_intent": "success"
+          },
+          {
+            "action": "assert_visible",
+            "selector": "text=You have been logged out",
+            "expected_intent": "success"
+          }
+        ]
+      }
+    ]
+  },
+  "base_url": "https://novalantis.com/"
+}

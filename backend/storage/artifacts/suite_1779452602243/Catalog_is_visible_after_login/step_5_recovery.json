@@ -1,0 +1,7 @@
+{
+  "step_index": 4,
+  "action": "assert_visible",
+  "selector_used": ".product-list",
+  "recovery_attempts": [],
+  "error": "Selector pre-validation failed for '.product-list' on 'assert_visible': Healed selector semantic mismatch: original=.product-list new=#login_credentials"
+}

@@ -1,0 +1,7 @@
+{
+  "step_index": 2,
+  "action": "click",
+  "selector_used": "#login-button",
+  "recovery_attempts": [],
+  "error": "click failed on '#login-button': Locator.wait_for: Connection closed while reading from the driver"
+}

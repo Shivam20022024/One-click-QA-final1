@@ -1,0 +1,159 @@
+{
+  "application": "nopCommerce",
+  "application_map": {
+    "pages": [
+      "/",
+      "/login?returnUrl=%2F",
+      "/customer/info"
+    ],
+    "features": [
+      "User Authentication"
+    ],
+    "flows": [
+      "Login Flow"
+    ]
+  },
+  "test_suite": {
+    "tests": [
+      {
+        "feature": "User Authentication",
+        "test_type": "positive",
+        "test_name": "Successful login with valid credentials",
+        "expected_intent": "success",
+        "steps": [
+          {
+            "action": "goto",
+            "url": "/login?returnUrl=%2F",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "valid_username",
+            "selector": "#small-searchterms",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "valid_password",
+            "selector": "#small-searchterms",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "text=Log in",
+            "expected_intent": "success"
+          },
+          {
+            "action": "assert_visible",
+            "selector": "text=My account",
+            "expected_intent": "success"
+          }
+        ]
+      },
+      {
+        "feature": "User Authentication",
+        "test_type": "negative",
+        "test_name": "Failed login with invalid credentials",
+        "expected_intent": "error",
+        "steps": [
+          {
+            "action": "goto",
+            "url": "/login?returnUrl=%2F",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "invalid_username",
+            "selector": "#small-searchterms",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "invalid_password",
+            "selector": "#small-searchterms",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "text=Log in",
+            "expected_intent": "success"
+          },
+          {
+            "action": "assert_visible",
+            "selector": "text=Login was unsuccessful",
+            "expected_intent": "error"
+          }
+        ]
+      },
+      {
+        "feature": "User Authentication",
+        "test_type": "edge",
+        "test_name": "Login attempt with empty fields",
+        "expected_intent": "validation",
+        "steps": [
+          {
+            "action": "goto",
+            "url": "/login?returnUrl=%2F",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "text=Log in",
+            "expected_intent": "success"
+          },
+          {
+            "action": "assert_visible",
+            "selector": "text=Please enter your email",
+            "expected_intent": "validation"
+          }
+        ]
+      },
+      {
+        "feature": "User Authentication",
+        "test_type": "e2e",
+        "test_name": "Complete login flow and navigate to account page",
+        "expected_intent": "success",
+        "steps": [
+          {
+            "action": "goto",
+            "url": "/login?returnUrl=%2F",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "valid_username",
+            "selector": "#small-searchterms",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "valid_password",
+            "selector": "#small-searchterms",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "text=Log in",
+            "expected_intent": "success"
+          },
+          {
+            "action": "assert_visible",
+            "selector": "text=My account",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "text=My account",
+            "expected_intent": "success"
+          },
+          {
+            "action": "assert_visible",
+            "selector": "text=Orders",
+            "expected_intent": "success"
+          }
+        ]
+      }
+    ]
+  },
+  "base_url": "https://demo.nopcommerce.com/"
+}

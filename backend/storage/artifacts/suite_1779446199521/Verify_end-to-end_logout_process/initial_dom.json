@@ -1,0 +1,5 @@
+{
+  "test_name": "Verify end-to-end logout process",
+  "base_url": "https://novalantis.com",
+  "dom_elements": []
+}

@@ -1,0 +1,7 @@
+{
+  "step_index": 7,
+  "action": "fill",
+  "selector_used": "#last-name",
+  "recovery_attempts": [],
+  "error": "Selector pre-validation failed for '#last-name' on 'fill': Selector not found"
+}

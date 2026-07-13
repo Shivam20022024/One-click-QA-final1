@@ -1,0 +1,7 @@
+{
+  "step_index": 4,
+  "action": "assert_visible",
+  "selector_used": ".shopping_cart_badge",
+  "recovery_attempts": [],
+  "error": "Selector pre-validation failed for '#shopping_cart_container' on 'assert_visible': Selector not found"
+}

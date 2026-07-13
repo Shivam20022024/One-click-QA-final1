@@ -1,0 +1,7 @@
+{
+  "step_index": 5,
+  "action": "assert_text",
+  "selector_used": "span.shopping_cart_badge",
+  "recovery_attempts": [],
+  "error": "Selector pre-validation failed for 'span.shopping_cart_badge' on 'assert_text': Selector not found"
+}

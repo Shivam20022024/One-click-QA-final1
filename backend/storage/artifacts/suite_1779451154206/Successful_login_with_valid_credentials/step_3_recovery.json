@@ -1,0 +1,7 @@
+{
+  "step_index": 2,
+  "action": "fill",
+  "selector_used": "#small-searchterms",
+  "recovery_attempts": [],
+  "error": "Browser network error: net::ERR_ABORTED"
+}

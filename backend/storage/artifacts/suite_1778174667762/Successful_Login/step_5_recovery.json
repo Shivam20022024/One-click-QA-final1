@@ -1,0 +1,7 @@
+{
+  "step_index": 4,
+  "action": "assert_visible",
+  "selector_used": ".product_list",
+  "recovery_attempts": [],
+  "error": "Selector '.bm-item-list' found (1 elements) but none are visible"
+}

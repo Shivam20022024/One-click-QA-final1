@@ -1,0 +1,7 @@
+{
+  "step_index": 4,
+  "action": "assert_visible",
+  "selector_used": "#inventory_container",
+  "recovery_attempts": [],
+  "error": "Selector pre-validation failed for '#inventory_container' on 'assert_visible': Healed selector semantic mismatch: original=#inventory_container new=#login_credentials"
+}

@@ -1,0 +1,277 @@
+{
+  "suite_id": "suite_1778172609033",
+  "generated_at": "2026-05-07T22:20:14.717361",
+  "base_url": "https://www.saucedemo.com/",
+  "suite": {
+    "application": "Generic Web App",
+    "test_suite": {
+      "tests": [
+        {
+          "test_name": "Landing page renders",
+          "test_type": "positive",
+          "feature": "Smoke",
+          "steps": [
+            {
+              "action": "goto",
+              "url": "/"
+            },
+            {
+              "action": "assert_visible",
+              "selector": "body"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "baseline_workflow": {
+    "authenticated": false,
+    "working_routes": [
+      "https://www.saucedemo.com"
+    ],
+    "validated_selectors": [
+      "body"
+    ],
+    "successful_pages": [
+      "/storage/screenshots/suite_1778172609033/Landing_page_renders/passed.png"
+    ],
+    "failed_tests": [],
+    "phase_order": [
+      "positive_flows",
+      "e2e_flows",
+      "negative_flows",
+      "edge_flows"
+    ]
+  },
+  "baseline_success": true,
+  "executions": [
+    {
+      "test_name": "Landing page renders",
+      "test_type": "positive",
+      "execution_priority": 1,
+      "execution_phase": "positive_flows",
+      "execution_result": {
+        "test_name": "Landing page renders",
+        "status": "passed",
+        "steps_executed": [
+          {
+            "step_index": 0,
+            "action": "goto",
+            "status": "passed",
+            "duration_ms": 3907.8,
+            "screenshot_path": null,
+            "screenshot_url": null,
+            "screenshot_exists": false,
+            "captured_at": null,
+            "before_screenshot_url": null,
+            "after_screenshot_url": null,
+            "failure_screenshot_url": null,
+            "assertion_screenshot_url": null,
+            "dom_snapshot_url": null,
+            "html_snapshot_url": null,
+            "selector_used": null,
+            "selector_validated": false,
+            "selector_visible": null,
+            "selector_enabled": null,
+            "selector_unique": null,
+            "recovery_attempts": [],
+            "artifacts": {},
+            "error": null,
+            "error_type": null,
+            "retries_used": 0,
+            "healed": false,
+            "memory_used": false,
+            "healing_type": "none",
+            "original_selector": null,
+            "new_selector": null,
+            "selector_score_original": null,
+            "selector_score_new": null,
+            "expected_intent": null,
+            "actual_detected_type": null,
+            "intent_match": null,
+            "logs": [
+              "[16:50:09.811] INFO    | [Step 1] START  action=goto",
+              "[16:50:09.812] INFO    | goto \u2192 https://www.saucedemo.com/",
+              "[16:50:11.785] DEBUG   | [browser:console] log: Content is cached for offline use.",
+              "[16:50:12.346] WARNING | [browser:console] NON-CRITICAL error: Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+              "[16:50:13.126] WARNING | [browser:console] NON-CRITICAL error: Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+              "[16:50:13.720] INFO    | [Step 1] PASSED action=goto (3908ms, retries=0)"
+            ],
+            "timestamp": "2026-05-07T16:50:13.720278+00:00",
+            "started_at": "2026-05-07T16:50:09.812483+00:00",
+            "completed_at": "2026-05-07T16:50:13.720278+00:00",
+            "url_before": "about:blank",
+            "url_after": "https://www.saucedemo.com/",
+            "ai_reasoning": null
+          },
+          {
+            "step_index": 1,
+            "action": "assert_visible",
+            "status": "passed",
+            "duration_ms": 647.16,
+            "screenshot_path": "/storage/screenshots/suite_1778172609033/Landing_page_renders/step_2_after.png",
+            "screenshot_url": "/storage/screenshots/suite_1778172609033/Landing_page_renders/step_2_after.png",
+            "screenshot_exists": true,
+            "captured_at": "2026-05-07T16:50:14.370294+00:00",
+            "before_screenshot_url": null,
+            "after_screenshot_url": "/storage/screenshots/suite_1778172609033/Landing_page_renders/step_2_after.png",
+            "failure_screenshot_url": null,
+            "assertion_screenshot_url": null,
+            "dom_snapshot_url": null,
+            "html_snapshot_url": null,
+            "selector_used": "body",
+            "selector_validated": true,
+            "selector_visible": true,
+            "selector_enabled": true,
+            "selector_unique": true,
+            "recovery_attempts": [],
+            "artifacts": {
+              "after_screenshot": "/storage/screenshots/suite_1778172609033/Landing_page_renders/step_2_after.png"
+            },
+            "error": null,
+            "error_type": null,
+            "retries_used": 0,
+            "healed": false,
+            "memory_used": false,
+            "healing_type": "none",
+            "original_selector": null,
+            "new_selector": null,
+            "selector_score_original": null,
+            "selector_score_new": null,
+            "expected_intent": null,
+            "actual_detected_type": "unknown",
+            "intent_match": true,
+            "logs": [
+              "[16:50:13.721] INFO    | [Step 2] START  action=assert_visible",
+              "[16:50:13.722] INFO    | Pre-validating selector 'body' for action 'ActionType.ASSERT_VISIBLE'",
+              "[16:50:13.903] INFO    | Selector validation passed: count=1 visible=True enabled=True unique=True",
+              "[16:50:13.904] INFO    | assert_visible WAITING for selector='body'",
+              "[16:50:14.043] INFO    | assert_visible ELEMENT VISIBLE 'body'",
+              "[16:50:14.368] INFO    | [SCREENSHOT] captured attempt=1 path=C:\\Users\\KIIT\\Desktop\\Novalantis\\ai-testing-platform\\backend\\storage\\screenshots\\suite_1778172609033\\Landing_page_renders\\step_2_after.png exists=True size=29435 url=https://www.saucedemo.com/ title='Swag Labs' body_text_len=161 ts=2026-05-07T16:50:14.368294+00:00",
+              "[16:50:14.369] INFO    | [Step 2] PASSED action=assert_visible (647ms, retries=0)"
+            ],
+            "timestamp": "2026-05-07T16:50:14.369290+00:00",
+            "started_at": "2026-05-07T16:50:13.722288+00:00",
+            "completed_at": "2026-05-07T16:50:14.369290+00:00",
+            "url_before": "https://www.saucedemo.com/",
+            "url_after": "https://www.saucedemo.com/",
+            "ai_reasoning": null
+          }
+        ],
+        "failed_step": null,
+        "error": null,
+        "error_type": null,
+        "screenshot_path": "/storage/screenshots/suite_1778172609033/Landing_page_renders/passed.png",
+        "screenshot_url": "/storage/screenshots/suite_1778172609033/Landing_page_renders/passed.png",
+        "screenshot_exists": true,
+        "executed_at": "2026-05-07T16:50:14.711636+00:00",
+        "trace_url": null,
+        "video_url": null,
+        "artifact_dir_url": "/storage/artifacts/suite_1778172609033/Landing_page_renders",
+        "logs": [
+          "[16:50:09.039] INFO    | === TEST RUN START  name='Landing page renders'  browser=chromium  headless=True  base_url=https://www.saucedemo.com  evidence=minimal  trace=False  video=False ===",
+          "[16:50:09.377] INFO    | Launching chromium  headless=True",
+          "[16:50:09.715] WARNING | DEBUG: patched Page.wait_for_function for runtime tracing",
+          "[16:50:09.716] WARNING | DEBUG: patched Frame.wait_for_function for runtime tracing",
+          "[16:50:09.811] INFO    | [Step 1] START  action=goto",
+          "[16:50:09.812] INFO    | goto \u2192 https://www.saucedemo.com/",
+          "[16:50:11.785] DEBUG   | [browser:console] log: Content is cached for offline use.",
+          "[16:50:12.346] WARNING | [browser:console] NON-CRITICAL error: Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+          "[16:50:13.126] WARNING | [browser:console] NON-CRITICAL error: Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+          "[16:50:13.720] INFO    | [Step 1] PASSED action=goto (3908ms, retries=0)",
+          "[16:50:13.721] INFO    | [Step 2] START  action=assert_visible",
+          "[16:50:13.722] INFO    | Pre-validating selector 'body' for action 'ActionType.ASSERT_VISIBLE'",
+          "[16:50:13.903] INFO    | Selector validation passed: count=1 visible=True enabled=True unique=True",
+          "[16:50:13.904] INFO    | assert_visible WAITING for selector='body'",
+          "[16:50:14.043] INFO    | assert_visible ELEMENT VISIBLE 'body'",
+          "[16:50:14.368] INFO    | [SCREENSHOT] captured attempt=1 path=C:\\Users\\KIIT\\Desktop\\Novalantis\\ai-testing-platform\\backend\\storage\\screenshots\\suite_1778172609033\\Landing_page_renders\\step_2_after.png exists=True size=29435 url=https://www.saucedemo.com/ title='Swag Labs' body_text_len=161 ts=2026-05-07T16:50:14.368294+00:00",
+          "[16:50:14.369] INFO    | [Step 2] PASSED action=assert_visible (647ms, retries=0)",
+          "[16:50:14.619] INFO    | [SCREENSHOT] captured attempt=1 path=C:\\Users\\KIIT\\Desktop\\Novalantis\\ai-testing-platform\\backend\\storage\\screenshots\\suite_1778172609033\\Landing_page_renders\\passed.png exists=True size=29435 url=https://www.saucedemo.com/ title='Swag Labs' body_text_len=161 ts=2026-05-07T16:50:14.618908+00:00",
+          "[16:50:14.706] INFO    | === TEST RUN END  status=ExecutionStatus.PASSED  total=5666ms ===",
+          "[16:50:14.707] INFO    | === TEST RUN HEALING SUMMARY healed=False healed_steps=0 ==="
+        ],
+        "total_duration_ms": 5666.49,
+        "browser": "chromium",
+        "base_url": "https://www.saucedemo.com",
+        "warnings": [
+          {
+            "type": "CONSOLE_NON_CRITICAL_ERROR",
+            "message": "Console error: Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+            "url": null,
+            "resource_type": null,
+            "status_code": null
+          },
+          {
+            "type": "CONSOLE_NON_CRITICAL_ERROR",
+            "message": "Console error: Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+            "url": null,
+            "resource_type": null,
+            "status_code": null
+          }
+        ],
+        "console_errors": [
+          {
+            "type": "CONSOLE_NON_CRITICAL_ERROR",
+            "message": "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+            "severity": "non_critical"
+          },
+          {
+            "type": "CONSOLE_NON_CRITICAL_ERROR",
+            "message": "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+            "severity": "non_critical"
+          }
+        ],
+        "network_errors": [],
+        "execution_id": "suite_1778172609033__Landing_page_renders__1778172609039",
+        "suite_id": "suite_1778172609033",
+        "timeline": [
+          {
+            "step": 1,
+            "action": "goto",
+            "selector": null,
+            "status": "passed",
+            "duration_ms": 3907.8,
+            "timestamp": "2026-05-07T16:50:13.720278+00:00",
+            "started_at": "2026-05-07T16:50:09.812483+00:00",
+            "completed_at": "2026-05-07T16:50:13.720278+00:00",
+            "url_before": "about:blank",
+            "url_after": "https://www.saucedemo.com/",
+            "ai_reasoning": null,
+            "self_healing_attempts": [],
+            "retries": 0,
+            "error": null
+          },
+          {
+            "step": 2,
+            "action": "assert_visible",
+            "selector": "body",
+            "status": "passed",
+            "duration_ms": 647.16,
+            "timestamp": "2026-05-07T16:50:14.369290+00:00",
+            "started_at": "2026-05-07T16:50:13.722288+00:00",
+            "completed_at": "2026-05-07T16:50:14.369290+00:00",
+            "url_before": "https://www.saucedemo.com/",
+            "url_after": "https://www.saucedemo.com/",
+            "ai_reasoning": null,
+            "self_healing_attempts": [],
+            "retries": 0,
+            "error": null
+          }
+        ],
+        "test_case_video_url": null,
+        "test_case_video_path": null
+      },
+      "timestamp": "2026-05-07T22:20:14.714863"
+    }
+  ],
+  "screenshot_summary": {
+    "tests_with_screenshots": 1,
+    "total_screenshots": 2
+  },
+  "report": {
+    "name": "report_20260507_222014.html",
+    "url": "/storage/reports/report_20260507_222014.html",
+    "size_bytes": 1623,
+    "updated_at": 1778172614.7168012
+  }
+}

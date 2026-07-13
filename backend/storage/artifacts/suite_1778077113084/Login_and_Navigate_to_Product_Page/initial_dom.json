@@ -1,0 +1,5 @@
+{
+  "test_name": "Login and Navigate to Product Page",
+  "base_url": "https://www.saucedemo.com",
+  "dom_elements": []
+}

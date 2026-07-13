@@ -1,0 +1,136 @@
+﻿{
+  "testCases": [
+    {
+      "name": "Homepage and login validation",
+      "description": "Strict execution for scenario 1",
+      "priority": "P0",
+      "type": "positive",
+      "capability": "custom",
+      "scenarioId": 1,
+      "scenarioName": "Homepage and login validation",
+      "required": true
+    },
+    {
+      "name": "Invalid login testing",
+      "description": "Strict execution for scenario 2",
+      "priority": "P0",
+      "type": "positive",
+      "capability": "custom",
+      "scenarioId": 2,
+      "scenarioName": "Invalid login testing",
+      "required": true
+    },
+    {
+      "name": "Valid login testing",
+      "description": "Strict execution for scenario 3",
+      "priority": "P0",
+      "type": "positive",
+      "capability": "custom",
+      "scenarioId": 3,
+      "scenarioName": "Valid login testing",
+      "required": true
+    },
+    {
+      "name": "Product validation",
+      "description": "Strict execution for scenario 4",
+      "priority": "P0",
+      "type": "positive",
+      "capability": "custom",
+      "scenarioId": 4,
+      "scenarioName": "Product validation",
+      "required": true
+    },
+    {
+      "name": "Add to cart flow",
+      "description": "Strict execution for scenario 5",
+      "priority": "P0",
+      "type": "positive",
+      "capability": "custom",
+      "scenarioId": 5,
+      "scenarioName": "Add to cart flow",
+      "required": true
+    },
+    {
+      "name": "Remove product validation",
+      "description": "Strict execution for scenario 6",
+      "priority": "P0",
+      "type": "positive",
+      "capability": "custom",
+      "scenarioId": 6,
+      "scenarioName": "Remove product validation",
+      "required": true
+    },
+    {
+      "name": "Checkout flow",
+      "description": "Strict execution for scenario 7",
+      "priority": "P0",
+      "type": "positive",
+      "capability": "custom",
+      "scenarioId": 7,
+      "scenarioName": "Checkout flow",
+      "required": true
+    },
+    {
+      "name": "Order completion",
+      "description": "Strict execution for scenario 8",
+      "priority": "P0",
+      "type": "positive",
+      "capability": "custom",
+      "scenarioId": 8,
+      "scenarioName": "Order completion",
+      "required": true
+    },
+    {
+      "name": "Navigation validation",
+      "description": "Strict execution for scenario 9",
+      "priority": "P0",
+      "type": "positive",
+      "capability": "custom",
+      "scenarioId": 9,
+      "scenarioName": "Navigation validation",
+      "required": true
+    },
+    {
+      "name": "Menu validation",
+      "description": "Strict execution for scenario 10",
+      "priority": "P0",
+      "type": "positive",
+      "capability": "custom",
+      "scenarioId": 10,
+      "scenarioName": "Menu validation",
+      "required": true
+    },
+    {
+      "name": "Logout validation",
+      "description": "Strict execution for scenario 11",
+      "priority": "P0",
+      "type": "positive",
+      "capability": "custom",
+      "scenarioId": 11,
+      "scenarioName": "Logout validation",
+      "required": true
+    },
+    {
+      "name": "Back navigation validation",
+      "description": "Strict execution for scenario 12",
+      "priority": "P0",
+      "type": "positive",
+      "capability": "custom",
+      "scenarioId": 12,
+      "scenarioName": "Back navigation validation",
+      "required": true
+    },
+    {
+      "name": "UI validation",
+      "description": "Strict execution for scenario 13",
+      "priority": "P0",
+      "type": "positive",
+      "capability": "custom",
+      "scenarioId": 13,
+      "scenarioName": "UI validation",
+      "required": true
+    }
+  ],
+  "scriptCode": "[{\"scenarioName\":\"Homepage and login validation\",\"action\":\"goto\",\"url\":\"https://www.saucedemo.com/\",\"selector\":null,\"value\":null,\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Homepage and login validation\",\"action\":\"wait\",\"url\":null,\"selector\":\"#login-button\",\"value\":null,\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Homepage and login validation\",\"action\":\"assertVisible\",\"url\":null,\"selector\":\"#user-name\",\"value\":null,\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Homepage and login validation\",\"action\":\"assertVisible\",\"url\":null,\"selector\":\"#password\",\"value\":null,\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Homepage and login validation\",\"action\":\"assertVisible\",\"url\":null,\"selector\":\"#login-button\",\"value\":null,\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Homepage and login validation\",\"action\":\"assertVisible\",\"url\":null,\"selector\":\"div.login_credentials\",\"value\":null,\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Invalid login testing\",\"action\":\"goto\",\"url\":\"https://www.saucedemo.com/\",\"selector\":null,\"value\":null,\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Invalid login testing\",\"action\":\"wait\",\"url\":null,\"selector\":\"#login-button\",\"value\":null,\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Invalid login testing\",\"action\":\"fill\",\"url\":null,\"selector\":\"#user-name\",\"value\":\"invalid_user\",\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Invalid login testing\",\"action\":\"fill\",\"url\":null,\"selector\":\"#password\",\"value\":\"invalid_password\",\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Invalid login testing\",\"action\":\"click\",\"url\":null,\"selector\":\"#login-button\",\"value\":null,\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Invalid login testing\",\"action\":\"wait\",\"url\":null,\"selector\":\"h3[data-test='error']\",\"value\":null,\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Invalid login testing\",\"action\":\"assertVisible\",\"url\":null,\"selector\":\"h3[data-test='error']\",\"value\":null,\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Invalid login testing\",\"action\":\"assertText\",\"url\":null,\"selector\":\"h3[data-test='error']\",\"value\":\"Epic sadface: Username and password do not match any user in this service\",\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Valid login testing\",\"action\":\"goto\",\"url\":\"https://www.saucedemo.com/\",\"selector\":null,\"value\":null,\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Valid login testing\",\"action\":\"wait\",\"url\":null,\"selector\":\"#login-button\",\"value\":null,\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Valid login testing\",\"action\":\"fill\",\"url\":null,\"selector\":\"#user-name\",\"value\":\"standard_user\",\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Valid login testing\",\"action\":\"fill\",\"url\":null,\"selector\":\"#password\",\"value\":\"secret_sauce\",\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Valid login testing\",\"action\":\"click\",\"url\":null,\"selector\":\"#login-button\",\"value\":null,\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Valid login testing\",\"action\":\"wait\",\"url\":null,\"selector\":\".inventory_list\",\"value\":null,\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Valid login testing\",\"action\":\"assertVisible\",\"url\":null,\"selector\":\".inventory_list\",\"value\":null,\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Product validation\",\"action\":\"goto\",\"url\":\"https://www.saucedemo.com/inventory.html\",\"selector\":null,\"value\":null,\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Product validation\",\"action\":\"wait\",\"url\":null,\"selector\":\".inventory_item\",\"value\":null,\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Product validation\",\"action\":\"assertVisible\",\"url\":null,\"selector\":\".inventory_item\",\"value\":null,\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Product validation\",\"action\":\"assertVisible\",\"url\":null,\"selector\":\".inventory_item_name\",\"value\":null,\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Product validation\",\"action\":\"assertVisible\",\"url\":null,\"selector\":\".inventory_item_price\",\"value\":null,\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Product validation\",\"action\":\"assertVisible\",\"url\":null,\"selector\":\".btn_inventory\",\"value\":null,\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Add to cart flow\",\"action\":\"goto\",\"url\":\"https://www.saucedemo.com/cart.html\",\"selector\":null,\"value\":null,\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Add to cart flow\",\"action\":\"wait\",\"url\":null,\"selector\":\".cart_item\",\"value\":null,\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Add to cart flow\",\"action\":\"assertVisible\",\"url\":null,\"selector\":\".cart_item\",\"value\":null,\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Add to cart flow\",\"action\":\"assertVisible\",\"url\":null,\"selector\":\".cart_badge\",\"value\":null,\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Remove product validation\",\"action\":\"goto\",\"url\":\"https://www.saucedemo.com/\",\"selector\":null,\"value\":null,\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Remove product validation\",\"action\":\"wait\",\"url\":null,\"selector\":\"#shopping_cart_container\",\"value\":null,\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Remove product validation\",\"action\":\"click\",\"url\":null,\"selector\":\"#remove-sauce-labs-backpack\",\"value\":null,\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Remove product validation\",\"action\":\"wait\",\"url\":null,\"selector\":\"#shopping_cart_container\",\"value\":null,\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Remove product validation\",\"action\":\"assertVisible\",\"url\":null,\"selector\":\".cart_quantity\",\"value\":\"0\",\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Checkout flow\",\"action\":\"goto\",\"url\":\"https://www.saucedemo.com/\",\"selector\":null,\"value\":null,\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Checkout flow\",\"action\":\"wait\",\"url\":null,\"selector\":\"#checkout\",\"value\":null,\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Checkout flow\",\"action\":\"click\",\"url\":null,\"selector\":\"#checkout\",\"value\":null,\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Checkout flow\",\"action\":\"wait\",\"url\":null,\"selector\":\".checkout_info\",\"value\":null,\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Checkout flow\",\"action\":\"fill\",\"url\":null,\"selector\":\"input[name=\\\"firstName\\\"]\",\"value\":\"John\",\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Checkout flow\",\"action\":\"fill\",\"url\":null,\"selector\":\"input[name=\\\"lastName\\\"]\",\"value\":\"Doe\",\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Checkout flow\",\"action\":\"fill\",\"url\":null,\"selector\":\"input[name=\\\"postalCode\\\"]\",\"value\":\"12345\",\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Checkout flow\",\"action\":\"click\",\"url\":null,\"selector\":\"button[type=\\\"submit\\\"]\",\"value\":null,\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Checkout flow\",\"action\":\"wait\",\"url\":null,\"selector\":\".summary_info\",\"value\":null,\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Checkout flow\",\"action\":\"assertVisible\",\"url\":null,\"selector\":\".summary_info\",\"value\":null,\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Order completion\",\"action\":\"goto\",\"url\":\"https://www.saucedemo.com/\",\"selector\":null,\"value\":null,\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Order completion\",\"action\":\"wait\",\"url\":null,\"selector\":\".complete-header\",\"value\":null,\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Order completion\",\"action\":\"assertVisible\",\"url\":null,\"selector\":\".complete-header\",\"value\":\"Thank you for your order!\",\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Navigation validation\",\"action\":\"goto\",\"url\":\"https://www.saucedemo.com/\",\"selector\":null,\"value\":null,\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Navigation validation\",\"action\":\"wait\",\"url\":null,\"selector\":\"#inventory_container\",\"value\":null,\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Navigation validation\",\"action\":\"click\",\"url\":null,\"selector\":\"#inventory_container a[href=\\\"/cart.html\\\"]\",\"value\":null,\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Navigation validation\",\"action\":\"wait\",\"url\":null,\"selector\":\"#cart_contents_container\",\"value\":null,\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Navigation validation\",\"action\":\"click\",\"url\":null,\"selector\":\"#checkout\",\"value\":null,\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Navigation validation\",\"action\":\"wait\",\"url\":null,\"selector\":\".checkout_info\",\"value\":null,\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Navigation validation\",\"action\":\"click\",\"url\":null,\"selector\":\"#back-to-products\",\"value\":null,\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Navigation validation\",\"action\":\"wait\",\"url\":null,\"selector\":\"#inventory_container\",\"value\":null,\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Navigation validation\",\"action\":\"assertVisible\",\"url\":null,\"selector\":\"#inventory_container\",\"value\":null,\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Menu validation\",\"action\":\"goto\",\"url\":\"https://www.saucedemo.com/\",\"selector\":null,\"value\":null,\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Menu validation\",\"action\":\"wait\",\"url\":null,\"selector\":\"#react-burger-menu-btn\",\"value\":null,\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Menu validation\",\"action\":\"click\",\"url\":null,\"selector\":\"#react-burger-menu-btn\",\"value\":null,\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Menu validation\",\"action\":\"wait\",\"url\":null,\"selector\":\".bm-menu\",\"value\":null,\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Menu validation\",\"action\":\"assertVisible\",\"url\":null,\"selector\":\".bm-menu\",\"value\":null,\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Menu validation\",\"action\":\"click\",\"url\":null,\"selector\":\"a[href=\\\"/about.html\\\"]\",\"value\":null,\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Menu validation\",\"action\":\"wait\",\"url\":null,\"selector\":\"h1\",\"value\":null,\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Menu validation\",\"action\":\"assertVisible\",\"url\":null,\"selector\":\"h1\",\"value\":\"About\",\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Menu validation\",\"action\":\"click\",\"url\":null,\"selector\":\"#react-burger-cross-btn\",\"value\":null,\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Menu validation\",\"action\":\"wait\",\"url\":null,\"selector\":\".bm-menu\",\"value\":null,\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Menu validation\",\"action\":\"click\",\"url\":null,\"selector\":\"#logout_sidebar_link\",\"value\":null,\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Logout validation\",\"action\":\"goto\",\"url\":\"https://www.saucedemo.com/\",\"selector\":null,\"value\":null,\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Logout validation\",\"action\":\"click\",\"url\":null,\"selector\":\"#react-burger-menu-btn\",\"value\":null,\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Logout validation\",\"action\":\"assertVisible\",\"url\":null,\"selector\":\"#logout_sidebar_link\",\"value\":null,\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Logout validation\",\"action\":\"click\",\"url\":null,\"selector\":\"#logout_sidebar_link\",\"value\":null,\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Logout validation\",\"action\":\"wait\",\"url\":null,\"selector\":null,\"value\":null,\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Logout validation\",\"action\":\"assertVisible\",\"url\":null,\"selector\":\"#user-name\",\"value\":null,\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Logout validation\",\"action\":\"assertText\",\"url\":null,\"selector\":\"h3[data-test='error']\",\"value\":\"Epic sadface: You can only access this page when you are logged in\",\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Logout validation\",\"action\":\"goto\",\"url\":\"https://www.saucedemo.com/inventory.html\",\"selector\":null,\"value\":null,\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Logout validation\",\"action\":\"assertVisible\",\"url\":null,\"selector\":\"#user-name\",\"value\":null,\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Back navigation validation\",\"action\":\"goto\",\"url\":\"https://www.saucedemo.com/\",\"selector\":null,\"value\":null,\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Back navigation validation\",\"action\":\"click\",\"url\":null,\"selector\":\"#react-burger-menu-btn\",\"value\":null,\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Back navigation validation\",\"action\":\"assertVisible\",\"url\":null,\"selector\":\"#logout_sidebar_link\",\"value\":null,\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Back navigation validation\",\"action\":\"click\",\"url\":null,\"selector\":\"#logout_sidebar_link\",\"value\":null,\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Back navigation validation\",\"action\":\"wait\",\"url\":null,\"selector\":null,\"value\":null,\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Back navigation validation\",\"action\":\"goto\",\"url\":\"https://www.saucedemo.com/inventory.html\",\"selector\":null,\"value\":null,\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"Back navigation validation\",\"action\":\"assertVisible\",\"url\":null,\"selector\":\"#user-name\",\"value\":null,\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"UI validation\",\"action\":\"goto\",\"url\":\"https://www.saucedemo.com/\",\"selector\":null,\"value\":null,\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"UI validation\",\"action\":\"assertVisible\",\"url\":null,\"selector\":\"#user-name\",\"value\":null,\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"UI validation\",\"action\":\"assertVisible\",\"url\":null,\"selector\":\"#login-button\",\"value\":null,\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"UI validation\",\"action\":\"assertVisible\",\"url\":null,\"selector\":\"input[name=\\\"username\\\"]\",\"value\":null,\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"UI validation\",\"action\":\"assertVisible\",\"url\":null,\"selector\":\"input[name=\\\"password\\\"]\",\"value\":null,\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"UI validation\",\"action\":\"screenshot\",\"url\":null,\"selector\":null,\"value\":\"ui_validation_screenshot.png\",\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"UI validation\",\"action\":\"fill\",\"url\":null,\"selector\":\"#user-name\",\"value\":\"standard_user\",\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"UI validation\",\"action\":\"fill\",\"url\":null,\"selector\":\"#password\",\"value\":\"secret_sauce\",\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"UI validation\",\"action\":\"click\",\"url\":null,\"selector\":\"#login-button\",\"value\":null,\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"UI validation\",\"action\":\"wait\",\"url\":null,\"selector\":null,\"value\":null,\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000},{\"scenarioName\":\"UI validation\",\"action\":\"assertVisible\",\"url\":null,\"selector\":\"#inventory_container\",\"value\":null,\"contains\":null,\"state\":\"domcontentloaded\",\"timeout\":10000}]",
+  "requested_count": 13
+}

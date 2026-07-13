@@ -1,0 +1,7 @@
+{
+  "step_index": 8,
+  "action": "assert_visible",
+  "selector_used": ".order-confirmation",
+  "recovery_attempts": [],
+  "error": "Selector pre-validation failed for '.order-confirmation' on 'assert_visible': Healed selector semantic mismatch: original=.order-confirmation new=#checkout_info_container"
+}

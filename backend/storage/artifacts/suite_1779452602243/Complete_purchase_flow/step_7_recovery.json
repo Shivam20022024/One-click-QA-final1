@@ -1,0 +1,7 @@
+{
+  "step_index": 6,
+  "action": "click",
+  "selector_used": "#checkout-button",
+  "recovery_attempts": [],
+  "error": "Selector pre-validation failed for '#checkout-button' on 'click': Healed selector too generic: button"
+}

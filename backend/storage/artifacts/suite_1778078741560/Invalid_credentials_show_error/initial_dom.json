@@ -1,0 +1,5 @@
+{
+  "test_name": "Invalid credentials show error",
+  "base_url": "https://www.saucedemo.com",
+  "dom_elements": []
+}

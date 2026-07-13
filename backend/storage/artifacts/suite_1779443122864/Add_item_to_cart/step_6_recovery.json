@@ -1,0 +1,7 @@
+{
+  "step_index": 5,
+  "action": "assert_visible",
+  "selector_used": ".cart-count",
+  "recovery_attempts": [],
+  "error": "Selector pre-validation failed for '.cart-count' on 'assert_visible': Healed selector semantic mismatch: original=.cart-count new=#counter_11193128766a1025e5ea42b"
+}

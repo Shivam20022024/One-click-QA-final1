@@ -1,0 +1,7 @@
+{
+  "step_index": 4,
+  "action": "assert_visible",
+  "selector_used": ".shopping_cart_badge",
+  "recovery_attempts": [],
+  "error": "assert_visible failed on '.shopping_cart_badge': Locator.wait_for: Connection closed while reading from the driver"
+}

@@ -1,0 +1,7 @@
+{
+  "step_index": 2,
+  "action": "fill",
+  "selector_used": "input[name=\"your-email\"]",
+  "recovery_attempts": [],
+  "error": "Selector 'text=your' found (5 elements) but none are visible"
+}

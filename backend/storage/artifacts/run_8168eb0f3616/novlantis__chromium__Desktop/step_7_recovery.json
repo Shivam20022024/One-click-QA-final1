@@ -1,0 +1,7 @@
+{
+  "step_index": 6,
+  "action": "click",
+  "selector_used": "",
+  "recovery_attempts": [],
+  "error": "'click' action requires a 'selector' field"
+}

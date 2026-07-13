@@ -1,0 +1,7 @@
+{
+  "step_index": 8,
+  "action": "assert_visible",
+  "selector_used": ".order-confirmation",
+  "recovery_attempts": [],
+  "error": "assert_visible failed on '#login_credentials': Locator.wait_for: Connection closed while reading from the driver"
+}

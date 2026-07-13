@@ -1,0 +1,5 @@
+{
+  "test_name": "Add item to cart",
+  "base_url": "https://novalantis.com",
+  "dom_elements": []
+}

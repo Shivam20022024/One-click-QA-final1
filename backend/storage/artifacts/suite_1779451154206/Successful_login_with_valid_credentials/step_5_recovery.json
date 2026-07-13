@@ -1,0 +1,7 @@
+{
+  "step_index": 4,
+  "action": "assert_visible",
+  "selector_used": "text=My account",
+  "recovery_attempts": [],
+  "error": "Browser network error: net::ERR_ABORTED"
+}

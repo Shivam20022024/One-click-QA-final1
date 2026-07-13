@@ -1,0 +1,145 @@
+{
+  "application": "Novalantis",
+  "application_map": {
+    "pages": [
+      "login"
+    ],
+    "features": [
+      "login"
+    ],
+    "flows": []
+  },
+  "test_suite": {
+    "tests": [
+      {
+        "feature": "login",
+        "test_type": "positive",
+        "test_name": "Successful login with valid credentials",
+        "expected_intent": "success",
+        "steps": [
+          {
+            "action": "goto",
+            "url": "https://novalantis.com/login",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "valid_user@example.com",
+            "selector": "input[name=\"your-email\"]",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "validPassword123",
+            "selector": "input[type=\"password\"]",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "button[type=\"submit\"]",
+            "expected_intent": "success"
+          },
+          {
+            "action": "assert_visible",
+            "selector": "#content",
+            "expected_intent": "success"
+          }
+        ]
+      },
+      {
+        "feature": "login",
+        "test_type": "negative",
+        "test_name": "Failed login with invalid credentials",
+        "expected_intent": "error",
+        "steps": [
+          {
+            "action": "goto",
+            "url": "https://novalantis.com/login",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "invalid_user@example.com",
+            "selector": "input[name=\"your-email\"]",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "wrongPassword",
+            "selector": "input[type=\"password\"]",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "button[type=\"submit\"]",
+            "expected_intent": "success"
+          },
+          {
+            "action": "assert_visible",
+            "selector": ".error-message",
+            "expected_intent": "error"
+          }
+        ]
+      },
+      {
+        "feature": "login",
+        "test_type": "edge",
+        "test_name": "Login with empty email and password fields",
+        "expected_intent": "validation",
+        "steps": [
+          {
+            "action": "goto",
+            "url": "https://novalantis.com/login",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "button[type=\"submit\"]",
+            "expected_intent": "success"
+          },
+          {
+            "action": "assert_visible",
+            "selector": ".error-message",
+            "expected_intent": "validation"
+          }
+        ]
+      },
+      {
+        "feature": "login",
+        "test_type": "e2e",
+        "test_name": "End-to-end login and navigation to dashboard",
+        "expected_intent": "success",
+        "steps": [
+          {
+            "action": "goto",
+            "url": "https://novalantis.com/login",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "valid_user@example.com",
+            "selector": "input[name=\"your-email\"]",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "validPassword123",
+            "selector": "input[type=\"password\"]",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "button[type=\"submit\"]",
+            "expected_intent": "success"
+          },
+          {
+            "action": "assert_visible",
+            "selector": "#content",
+            "expected_intent": "success"
+          }
+        ]
+      }
+    ]
+  },
+  "base_url": "https://novalantis.com/"
+}

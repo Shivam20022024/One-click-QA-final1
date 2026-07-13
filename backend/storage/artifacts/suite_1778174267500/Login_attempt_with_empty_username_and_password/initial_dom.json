@@ -1,0 +1,5 @@
+{
+  "test_name": "Login attempt with empty username and password",
+  "base_url": "https://www.saucedemo.com",
+  "dom_elements": []
+}

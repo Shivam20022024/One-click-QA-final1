@@ -1,0 +1,5 @@
+{
+  "test_name": "Complete purchase flow",
+  "base_url": "https://novalantis.com",
+  "dom_elements": []
+}

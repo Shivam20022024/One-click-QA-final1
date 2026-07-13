@@ -1,0 +1,7 @@
+{
+  "step_index": 3,
+  "action": "click",
+  "selector_used": "#login-button",
+  "recovery_attempts": [],
+  "error": "Selector pre-validation failed for '#login-button' on 'click': Healed selector semantic mismatch: original=#login-button new=input:not([type='hidden'])"
+}

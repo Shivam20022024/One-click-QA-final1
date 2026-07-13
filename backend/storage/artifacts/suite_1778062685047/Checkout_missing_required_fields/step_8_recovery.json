@@ -1,0 +1,7 @@
+{
+  "step_index": 7,
+  "action": "assert_visible",
+  "selector_used": ".error-message-container",
+  "recovery_attempts": [],
+  "error": "Browser network error: net::ERR_FAILED"
+}

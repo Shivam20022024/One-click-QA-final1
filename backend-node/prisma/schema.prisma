@@ -1,0 +1,167 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "sqlite"
+  url       = "file:./dev.db"
+}
+
+model User {
+  id            String    @id @default(uuid())
+  email         String    @unique
+  name          String?
+  credits       Int       @default(100)
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  projects      Project[]
+  subscriptions Subscription[]
+  usage         UsageCredit[]
+}
+
+model Subscription {
+  id        String   @id @default(uuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  planType  String   @default("FREE") // FREE, PRO, ENTERPRISE
+  status    String   @default("ACTIVE")
+  stripeId  String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model UsageCredit {
+  id          String   @id @default(uuid())
+  userId      String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  amount      Int
+  description String
+  createdAt   DateTime @default(now())
+}
+
+model Project {
+  id          String      @id @default(uuid())
+  name        String
+  description String?
+  userId      String
+  user        User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  suites      TestSuite[]
+  discoveredFlows DiscoveredFlow[]
+  jiraIntegration JiraIntegration?
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+}
+
+model TestSuite {
+  id          String      @id @default(uuid())
+  name        String
+  description String?
+  projectId   String
+  project     Project     @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  tests       TestRun[]
+  executions  ExecutionLog[]
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+}
+
+model TestRun {
+  id          String      @id @default(uuid())
+  name        String
+  intent      String
+  steps       String
+  suiteId     String
+  suite       TestSuite   @relation(fields: [suiteId], references: [id], onDelete: Cascade)
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+}
+
+model ExecutionLog {
+  id            String         @id @default(uuid())
+  suiteId       String
+  suite         TestSuite      @relation(fields: [suiteId], references: [id], onDelete: Cascade)
+  status        String         // PENDING, RUNNING, PASSED, FAILED
+  browser       String         @default("chromium")
+  durationMs    Int?
+  startedAt     DateTime?
+  completedAt   DateTime?
+  logs          String?
+  stepLogs      String?          // Array of step-level traces
+  traceData     String?
+  planData      String?
+  reports       Report[]
+  screenshots   Screenshot[]
+  videos        Video[]
+  healingEvents HealingEvent[]
+  jiraTicketId  String?
+  jiraTicketUrl       String?
+  jiraAttachmentCount Int?
+  jiraSyncTimestamp   DateTime?
+  visualRegressionData String?
+  createdAt           DateTime       @default(now())
+  updatedAt           DateTime       @updatedAt
+}
+
+model JiraIntegration {
+  id         String   @id @default(uuid())
+  projectId  String   @unique
+  project    Project  @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  baseUrl    String
+  email      String
+  apiToken   String
+  projectKey String
+  issueType  String   @default("Bug")
+  isActive   Boolean  @default(true)
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
+
+model Screenshot {
+  id             String       @id @default(uuid())
+  executionLogId String
+  executionLog   ExecutionLog @relation(fields: [executionLogId], references: [id], onDelete: Cascade)
+  storagePath    String
+  url            String
+  createdAt      DateTime     @default(now())
+}
+
+model Video {
+  id             String       @id @default(uuid())
+  executionLogId String
+  executionLog   ExecutionLog @relation(fields: [executionLogId], references: [id], onDelete: Cascade)
+  storagePath    String
+  url            String
+  createdAt      DateTime     @default(now())
+}
+
+model Report {
+  id             String       @id @default(uuid())
+  executionLogId String
+  executionLog   ExecutionLog @relation(fields: [executionLogId], references: [id], onDelete: Cascade)
+  storagePath    String
+  url            String
+  createdAt      DateTime     @default(now())
+}
+
+model HealingEvent {
+  id               String       @id @default(uuid())
+  executionLogId   String
+  executionLog     ExecutionLog @relation(fields: [executionLogId], references: [id], onDelete: Cascade)
+  originalSelector String
+  healedSelector   String
+  success          Boolean
+  status           String       @default("PENDING") // PENDING, APPROVED, REJECTED
+  testName         String?
+  stepIndex        Int?
+  createdAt        DateTime     @default(now())
+}
+
+model DiscoveredFlow {
+  id          String   @id @default(uuid())
+  projectId   String
+  project     Project  @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  name        String
+  description String?
+  flowType    String?
+  steps       String
+  createdAt   DateTime @default(now())
+}

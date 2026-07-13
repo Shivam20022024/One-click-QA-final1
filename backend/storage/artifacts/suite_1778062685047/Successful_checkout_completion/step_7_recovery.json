@@ -1,0 +1,13 @@
+{
+  "step_index": 6,
+  "action": "click",
+  "selector_used": "button",
+  "recovery_attempts": [
+    {
+      "strategy": "heuristic",
+      "candidate": "button",
+      "success": true
+    }
+  ],
+  "error": "Browser network error: net::ERR_FAILED"
+}

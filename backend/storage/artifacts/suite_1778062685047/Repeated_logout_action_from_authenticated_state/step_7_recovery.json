@@ -1,0 +1,7 @@
+{
+  "step_index": 6,
+  "action": "assert_visible",
+  "selector_used": "#root",
+  "recovery_attempts": [],
+  "error": "Browser network error: net::ERR_ABORTED"
+}

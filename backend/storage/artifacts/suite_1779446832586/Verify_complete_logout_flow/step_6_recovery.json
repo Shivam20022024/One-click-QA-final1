@@ -1,0 +1,7 @@
+{
+  "step_index": 5,
+  "action": "assert_visible",
+  "selector_used": "text=You have been logged out",
+  "recovery_attempts": [],
+  "error": "Selector pre-validation failed for 'text=You have been logged out' on 'assert_visible': Healed selector semantic mismatch: original=text=You have been logged out new=#wpcf7-f2608-o1-ve-your-email"
+}

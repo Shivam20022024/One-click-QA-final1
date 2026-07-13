@@ -1,0 +1,7 @@
+{
+  "step_index": 5,
+  "action": "assert_visible",
+  "selector_used": "#account_details",
+  "recovery_attempts": [],
+  "error": "Selector pre-validation failed for '#account_details' on 'assert_visible': Healed selector too generic: #root"
+}

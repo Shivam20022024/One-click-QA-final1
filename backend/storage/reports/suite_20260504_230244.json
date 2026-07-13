@@ -1,0 +1,194 @@
+{
+  "application": "Sauce Demo",
+  "application_map": {
+    "pages": [
+      "Login Page",
+      "Inventory Page",
+      "Cart Page",
+      "Checkout Page",
+      "Checkout Complete Page"
+    ],
+    "features": [
+      "User Login",
+      "Product Listing",
+      "Add to Cart",
+      "Checkout Process"
+    ],
+    "flows": [
+      "User Login Flow",
+      "Add to Cart Flow",
+      "Checkout Flow"
+    ]
+  },
+  "test_suite": {
+    "tests": [
+      {
+        "feature": "User Login",
+        "test_type": "positive",
+        "test_name": "Successful login with valid credentials",
+        "expected_intent": "success",
+        "steps": [
+          "Navigate to https://www.saucedemo.com",
+          "Enter username 'standard_user'",
+          "Enter password 'secret_sauce'",
+          "Click on the login button"
+        ]
+      },
+      {
+        "feature": "User Login",
+        "test_type": "negative",
+        "test_name": "Unsuccessful login with invalid credentials",
+        "expected_intent": "error",
+        "steps": [
+          "Navigate to https://www.saucedemo.com",
+          "Enter username 'invalid_user'",
+          "Enter password 'wrong_password'",
+          "Click on the login button"
+        ]
+      },
+      {
+        "feature": "User Login",
+        "test_type": "edge",
+        "test_name": "Login attempt with empty credentials",
+        "expected_intent": "validation",
+        "steps": [
+          "Navigate to https://www.saucedemo.com",
+          "Leave username field empty",
+          "Leave password field empty",
+          "Click on the login button"
+        ]
+      },
+      {
+        "feature": "Product Listing",
+        "test_type": "positive",
+        "test_name": "View product listing after login",
+        "expected_intent": "success",
+        "steps": [
+          "Navigate to https://www.saucedemo.com",
+          "Enter username 'standard_user'",
+          "Enter password 'secret_sauce'",
+          "Click on the login button",
+          "Verify product listing is displayed"
+        ]
+      },
+      {
+        "feature": "Product Listing",
+        "test_type": "negative",
+        "test_name": "View product listing without login",
+        "expected_intent": "error",
+        "steps": [
+          "Navigate to https://www.saucedemo.com",
+          "Click on the login button without entering credentials"
+        ]
+      },
+      {
+        "feature": "Product Listing",
+        "test_type": "edge",
+        "test_name": "View product listing with slow network",
+        "expected_intent": "validation",
+        "steps": [
+          "Simulate slow network conditions",
+          "Navigate to https://www.saucedemo.com",
+          "Enter username 'standard_user'",
+          "Enter password 'secret_sauce'",
+          "Click on the login button"
+        ]
+      },
+      {
+        "feature": "Add to Cart",
+        "test_type": "positive",
+        "test_name": "Add a product to the cart",
+        "expected_intent": "success",
+        "steps": [
+          "Navigate to Inventory Page",
+          "Click on the 'Add to cart' button for a product",
+          "Verify the cart icon shows 1 item"
+        ]
+      },
+      {
+        "feature": "Add to Cart",
+        "test_type": "negative",
+        "test_name": "Add a product to the cart without login",
+        "expected_intent": "error",
+        "steps": [
+          "Navigate to Inventory Page",
+          "Click on the 'Add to cart' button for a product"
+        ]
+      },
+      {
+        "feature": "Add to Cart",
+        "test_type": "edge",
+        "test_name": "Add a product to the cart when out of stock",
+        "expected_intent": "validation",
+        "steps": [
+          "Navigate to Inventory Page",
+          "Select an out of stock product",
+          "Click on the 'Add to cart' button"
+        ]
+      },
+      {
+        "feature": "Checkout Process",
+        "test_type": "positive",
+        "test_name": "Complete checkout process successfully",
+        "expected_intent": "success",
+        "steps": [
+          "Navigate to Cart Page",
+          "Click on the 'Checkout' button",
+          "Enter first name 'John'",
+          "Enter last name 'Doe'",
+          "Enter postal code '12345'",
+          "Click on the 'Continue' button",
+          "Click on the 'Finish' button"
+        ]
+      },
+      {
+        "feature": "Checkout Process",
+        "test_type": "negative",
+        "test_name": "Fail checkout process with missing information",
+        "expected_intent": "error",
+        "steps": [
+          "Navigate to Cart Page",
+          "Click on the 'Checkout' button",
+          "Leave first name field empty",
+          "Click on the 'Continue' button"
+        ]
+      },
+      {
+        "feature": "Checkout Process",
+        "test_type": "edge",
+        "test_name": "Checkout with invalid postal code",
+        "expected_intent": "validation",
+        "steps": [
+          "Navigate to Cart Page",
+          "Click on the 'Checkout' button",
+          "Enter first name 'John'",
+          "Enter last name 'Doe'",
+          "Enter postal code 'invalid_code'",
+          "Click on the 'Continue' button"
+        ]
+      },
+      {
+        "feature": "Checkout Process",
+        "test_type": "e2e",
+        "test_name": "End-to-end checkout flow",
+        "expected_intent": "success",
+        "steps": [
+          "Navigate to https://www.saucedemo.com",
+          "Enter username 'standard_user'",
+          "Enter password 'secret_sauce'",
+          "Click on the login button",
+          "Navigate to Inventory Page",
+          "Click on the 'Add to cart' button for a product",
+          "Navigate to Cart Page",
+          "Click on the 'Checkout' button",
+          "Enter first name 'John'",
+          "Enter last name 'Doe'",
+          "Enter postal code '12345'",
+          "Click on the 'Continue' button",
+          "Click on the 'Finish' button",
+          "Verify checkout complete message is displayed"
+        ]
+      }
+    ]
+  }
+}

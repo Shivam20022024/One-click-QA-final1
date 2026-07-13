@@ -1,0 +1,287 @@
+{
+  "application": "OrangeHRM",
+  "application_map": {
+    "pages": [
+      "Login Page",
+      "Dashboard",
+      "Employee List",
+      "Add Employee",
+      "View Employee",
+      "PIM"
+    ],
+    "features": [
+      "User Authentication",
+      "Employee Management",
+      "Dashboard Navigation"
+    ],
+    "flows": [
+      "Login Flow",
+      "Employee Addition Flow",
+      "Employee Viewing Flow"
+    ]
+  },
+  "test_suite": {
+    "tests": [
+      {
+        "feature": "User Authentication",
+        "test_type": "positive",
+        "test_name": "Successful Login",
+        "expected_intent": "success",
+        "steps": [
+          {
+            "action": "goto",
+            "url": "https://opensource-demo.orangehrmlive.com/",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "Admin",
+            "selector": "#txtUsername",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "admin123",
+            "selector": "#txtPassword",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "#btnLogin",
+            "expected_intent": "success"
+          },
+          {
+            "action": "assert_visible",
+            "selector": "#welcome",
+            "expected_intent": "success"
+          }
+        ]
+      },
+      {
+        "feature": "User Authentication",
+        "test_type": "negative",
+        "test_name": "Unsuccessful Login with Invalid Credentials",
+        "expected_intent": "error",
+        "steps": [
+          {
+            "action": "goto",
+            "url": "https://opensource-demo.orangehrmlive.com/",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "InvalidUser",
+            "selector": "#txtUsername",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "InvalidPass",
+            "selector": "#txtPassword",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "#btnLogin",
+            "expected_intent": "success"
+          },
+          {
+            "action": "assert_visible",
+            "selector": "#spanMessage",
+            "expected_intent": "error"
+          }
+        ]
+      },
+      {
+        "feature": "User Authentication",
+        "test_type": "edge",
+        "test_name": "Login with Empty Credentials",
+        "expected_intent": "validation",
+        "steps": [
+          {
+            "action": "goto",
+            "url": "https://opensource-demo.orangehrmlive.com/",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "#btnLogin",
+            "expected_intent": "success"
+          },
+          {
+            "action": "assert_visible",
+            "selector": "#spanMessage",
+            "expected_intent": "validation"
+          }
+        ]
+      },
+      {
+        "feature": "Employee Management",
+        "test_type": "positive",
+        "test_name": "Add Employee Successfully",
+        "expected_intent": "success",
+        "steps": [
+          {
+            "action": "goto",
+            "url": "https://opensource-demo.orangehrmlive.com/index.php/pim/addEmployee",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "John",
+            "selector": "#firstName",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "Doe",
+            "selector": "#lastName",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "#btnSave",
+            "expected_intent": "success"
+          },
+          {
+            "action": "assert_visible",
+            "selector": "#employeeDetails",
+            "expected_intent": "success"
+          }
+        ]
+      },
+      {
+        "feature": "Employee Management",
+        "test_type": "negative",
+        "test_name": "Add Employee with Missing Required Fields",
+        "expected_intent": "error",
+        "steps": [
+          {
+            "action": "goto",
+            "url": "https://opensource-demo.orangehrmlive.com/index.php/pim/addEmployee",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "",
+            "selector": "#firstName",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "",
+            "selector": "#lastName",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "#btnSave",
+            "expected_intent": "success"
+          },
+          {
+            "action": "assert_visible",
+            "selector": "#requiredFieldError",
+            "expected_intent": "error"
+          }
+        ]
+      },
+      {
+        "feature": "Employee Management",
+        "test_type": "edge",
+        "test_name": "Add Employee with Special Characters in Name",
+        "expected_intent": "validation",
+        "steps": [
+          {
+            "action": "goto",
+            "url": "https://opensource-demo.orangehrmlive.com/index.php/pim/addEmployee",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "!@#$%",
+            "selector": "#firstName",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "!@#$%",
+            "selector": "#lastName",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "#btnSave",
+            "expected_intent": "success"
+          },
+          {
+            "action": "assert_visible",
+            "selector": "#nameValidationError",
+            "expected_intent": "validation"
+          }
+        ]
+      },
+      {
+        "feature": "Employee Management",
+        "test_type": "e2e",
+        "test_name": "Complete Employee Addition and View",
+        "expected_intent": "success",
+        "steps": [
+          {
+            "action": "goto",
+            "url": "https://opensource-demo.orangehrmlive.com/",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "Admin",
+            "selector": "#txtUsername",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "admin123",
+            "selector": "#txtPassword",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "#btnLogin",
+            "expected_intent": "success"
+          },
+          {
+            "action": "goto",
+            "url": "https://opensource-demo.orangehrmlive.com/index.php/pim/addEmployee",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "Jane",
+            "selector": "#firstName",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "Smith",
+            "selector": "#lastName",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "#btnSave",
+            "expected_intent": "success"
+          },
+          {
+            "action": "goto",
+            "url": "https://opensource-demo.orangehrmlive.com/index.php/pim/viewEmployeeList",
+            "expected_intent": "success"
+          },
+          {
+            "action": "assert_visible",
+            "selector": "#employeeList",
+            "expected_intent": "success"
+          }
+        ]
+      }
+    ]
+  }
+}

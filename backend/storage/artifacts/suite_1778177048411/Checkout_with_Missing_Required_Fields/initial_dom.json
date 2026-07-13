@@ -1,0 +1,5 @@
+{
+  "test_name": "Checkout with Missing Required Fields",
+  "base_url": "https://www.saucedemo.com",
+  "dom_elements": []
+}

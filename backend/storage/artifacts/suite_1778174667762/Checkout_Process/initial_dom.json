@@ -1,0 +1,5 @@
+{
+  "test_name": "Checkout Process",
+  "base_url": "https://www.saucedemo.com",
+  "dom_elements": []
+}

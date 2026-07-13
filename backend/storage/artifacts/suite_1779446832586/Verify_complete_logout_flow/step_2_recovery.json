@@ -1,0 +1,7 @@
+{
+  "step_index": 1,
+  "action": "click",
+  "selector_used": "text=LOGIN",
+  "recovery_attempts": [],
+  "error": "Selector pre-validation failed for 'text=LOGIN' on 'click': Healed selector semantic mismatch: original=text=LOGIN new=input:not([type='hidden'])"
+}

@@ -1,0 +1,86 @@
+[
+  {
+    "tag": "input",
+    "id": "user-name",
+    "name": "user-name",
+    "role": null,
+    "text": "",
+    "placeholder": "Username",
+    "ariaLabel": null,
+    "dataTestId": null,
+    "type": "text",
+    "href": null
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "name": null,
+    "role": "img",
+    "text": "",
+    "placeholder": null,
+    "ariaLabel": null,
+    "dataTestId": null,
+    "type": null,
+    "href": null
+  },
+  {
+    "tag": "input",
+    "id": "password",
+    "name": "password",
+    "role": null,
+    "text": "",
+    "placeholder": "Password",
+    "ariaLabel": null,
+    "dataTestId": null,
+    "type": "password",
+    "href": null
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "name": null,
+    "role": "img",
+    "text": "",
+    "placeholder": null,
+    "ariaLabel": null,
+    "dataTestId": null,
+    "type": null,
+    "href": null
+  },
+  {
+    "tag": "button",
+    "id": null,
+    "name": null,
+    "role": null,
+    "text": "",
+    "placeholder": null,
+    "ariaLabel": null,
+    "dataTestId": null,
+    "type": null,
+    "href": null
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "name": null,
+    "role": "img",
+    "text": "",
+    "placeholder": null,
+    "ariaLabel": null,
+    "dataTestId": null,
+    "type": null,
+    "href": null
+  },
+  {
+    "tag": "input",
+    "id": "login-button",
+    "name": "login-button",
+    "role": null,
+    "text": "",
+    "placeholder": null,
+    "ariaLabel": null,
+    "dataTestId": null,
+    "type": "submit",
+    "href": null
+  }
+]

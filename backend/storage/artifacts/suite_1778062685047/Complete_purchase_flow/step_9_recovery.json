@@ -1,0 +1,7 @@
+{
+  "step_index": 8,
+  "action": "assert_visible",
+  "selector_used": "#login_credentials",
+  "recovery_attempts": [],
+  "error": "Browser network error: net::ERR_FAILED"
+}

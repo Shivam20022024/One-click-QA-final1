@@ -1,0 +1,7 @@
+{
+  "step_index": 1,
+  "action": "fill",
+  "selector_used": "#password",
+  "recovery_attempts": [],
+  "error": "fill timed out waiting for '#password': Locator.wait_for: Timeout 30000ms exceeded.\nCall log:\nwaiting for locator(\"#password\") to be visible\n"
+}

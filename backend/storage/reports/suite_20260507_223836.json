@@ -1,0 +1,159 @@
+{
+  "application": "Sauce Demo",
+  "application_map": {
+    "pages": [
+      "Login Page"
+    ],
+    "features": [
+      "User Authentication"
+    ],
+    "flows": [
+      "Login Flow"
+    ]
+  },
+  "test_suite": {
+    "tests": [
+      {
+        "feature": "User Authentication",
+        "test_type": "positive",
+        "test_name": "Successful login with valid credentials",
+        "expected_intent": "success",
+        "steps": [
+          {
+            "action": "goto",
+            "url": "https://www.saucedemo.com/",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "standard_user",
+            "selector": "#user-name",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "secret_sauce",
+            "selector": "#password",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "#login-button",
+            "expected_intent": "success"
+          },
+          {
+            "action": "assert_visible",
+            "selector": "#inventory_container",
+            "expected_intent": "success"
+          }
+        ]
+      },
+      {
+        "feature": "User Authentication",
+        "test_type": "negative",
+        "test_name": "Failed login with invalid credentials",
+        "expected_intent": "error",
+        "steps": [
+          {
+            "action": "goto",
+            "url": "https://www.saucedemo.com/",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "invalid_user",
+            "selector": "#user-name",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "wrong_password",
+            "selector": "#password",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "#login-button",
+            "expected_intent": "success"
+          },
+          {
+            "action": "assert_visible",
+            "selector": ".error-message-container",
+            "expected_intent": "error"
+          }
+        ]
+      },
+      {
+        "feature": "User Authentication",
+        "test_type": "edge",
+        "test_name": "Login attempt with empty username and password",
+        "expected_intent": "validation",
+        "steps": [
+          {
+            "action": "goto",
+            "url": "https://www.saucedemo.com/",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "",
+            "selector": "#user-name",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "",
+            "selector": "#password",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "#login-button",
+            "expected_intent": "success"
+          },
+          {
+            "action": "assert_visible",
+            "selector": ".error-message-container",
+            "expected_intent": "validation"
+          }
+        ]
+      },
+      {
+        "feature": "User Authentication",
+        "test_type": "e2e",
+        "test_name": "Complete login flow and navigate to inventory",
+        "expected_intent": "success",
+        "steps": [
+          {
+            "action": "goto",
+            "url": "https://www.saucedemo.com/",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "standard_user",
+            "selector": "#user-name",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "secret_sauce",
+            "selector": "#password",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "#login-button",
+            "expected_intent": "success"
+          },
+          {
+            "action": "assert_visible",
+            "selector": "#inventory_container",
+            "expected_intent": "success"
+          }
+        ]
+      }
+    ]
+  },
+  "base_url": "https://www.saucedemo.com/"
+}

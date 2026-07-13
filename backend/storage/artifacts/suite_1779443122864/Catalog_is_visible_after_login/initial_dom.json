@@ -1,0 +1,5 @@
+{
+  "test_name": "Catalog is visible after login",
+  "base_url": "https://novalantis.com",
+  "dom_elements": []
+}

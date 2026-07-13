@@ -1,0 +1,389 @@
+{
+  "application": "SauceDemo",
+  "application_map": {
+    "pages": [
+      "Login Page",
+      "Account Page",
+      "Checkout Page"
+    ],
+    "features": [
+      "User Authentication",
+      "Account Management",
+      "Checkout Process"
+    ],
+    "flows": [
+      "Login Flow",
+      "Account Details Flow",
+      "Checkout Flow"
+    ]
+  },
+  "test_suite": {
+    "tests": [
+      {
+        "feature": "User Authentication",
+        "test_type": "positive",
+        "test_name": "Successful Login",
+        "expected_intent": "success",
+        "steps": [
+          {
+            "action": "goto",
+            "url": "https://www.saucedemo.com/",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "standard_user",
+            "selector": "#user-name",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "secret_sauce",
+            "selector": "#password",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "#login-button",
+            "expected_intent": "success"
+          },
+          {
+            "action": "assert_visible",
+            "selector": "#inventory_container",
+            "expected_intent": "success"
+          }
+        ]
+      },
+      {
+        "feature": "User Authentication",
+        "test_type": "negative",
+        "test_name": "Unsuccessful Login with Invalid Credentials",
+        "expected_intent": "error",
+        "steps": [
+          {
+            "action": "goto",
+            "url": "https://www.saucedemo.com/",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "invalid_user",
+            "selector": "#user-name",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "wrong_password",
+            "selector": "#password",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "#login-button",
+            "expected_intent": "success"
+          },
+          {
+            "action": "assert_visible",
+            "selector": ".error-message-container",
+            "expected_intent": "error"
+          }
+        ]
+      },
+      {
+        "feature": "User Authentication",
+        "test_type": "edge",
+        "test_name": "Login with Empty Credentials",
+        "expected_intent": "validation",
+        "steps": [
+          {
+            "action": "goto",
+            "url": "https://www.saucedemo.com/",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "#login-button",
+            "expected_intent": "success"
+          },
+          {
+            "action": "assert_visible",
+            "selector": ".error-message-container",
+            "expected_intent": "validation"
+          }
+        ]
+      },
+      {
+        "feature": "Account Management",
+        "test_type": "positive",
+        "test_name": "View Account Details After Login",
+        "expected_intent": "success",
+        "steps": [
+          {
+            "action": "goto",
+            "url": "https://www.saucedemo.com/",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "standard_user",
+            "selector": "#user-name",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "secret_sauce",
+            "selector": "#password",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "#login-button",
+            "expected_intent": "success"
+          },
+          {
+            "action": "goto",
+            "url": "https://www.saucedemo.com/account",
+            "expected_intent": "success"
+          },
+          {
+            "action": "assert_visible",
+            "selector": "#account-details",
+            "expected_intent": "success"
+          }
+        ]
+      },
+      {
+        "feature": "Account Management",
+        "test_type": "negative",
+        "test_name": "Access Account Page Without Login",
+        "expected_intent": "error",
+        "steps": [
+          {
+            "action": "goto",
+            "url": "https://www.saucedemo.com/account",
+            "expected_intent": "success"
+          },
+          {
+            "action": "assert_visible",
+            "selector": ".error-message-container",
+            "expected_intent": "error"
+          }
+        ]
+      },
+      {
+        "feature": "Checkout Process",
+        "test_type": "positive",
+        "test_name": "Successful Checkout Process",
+        "expected_intent": "success",
+        "steps": [
+          {
+            "action": "goto",
+            "url": "https://www.saucedemo.com/",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "standard_user",
+            "selector": "#user-name",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "secret_sauce",
+            "selector": "#password",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "#login-button",
+            "expected_intent": "success"
+          },
+          {
+            "action": "goto",
+            "url": "https://www.saucedemo.com/inventory",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": ".add-to-cart-button",
+            "expected_intent": "success"
+          },
+          {
+            "action": "goto",
+            "url": "https://www.saucedemo.com/cart",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "#checkout-button",
+            "expected_intent": "success"
+          },
+          {
+            "action": "assert_visible",
+            "selector": "#checkout-overview",
+            "expected_intent": "success"
+          }
+        ]
+      },
+      {
+        "feature": "Checkout Process",
+        "test_type": "negative",
+        "test_name": "Checkout Without Adding Items",
+        "expected_intent": "error",
+        "steps": [
+          {
+            "action": "goto",
+            "url": "https://www.saucedemo.com/",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "standard_user",
+            "selector": "#user-name",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "secret_sauce",
+            "selector": "#password",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "#login-button",
+            "expected_intent": "success"
+          },
+          {
+            "action": "goto",
+            "url": "https://www.saucedemo.com/cart",
+            "expected_intent": "success"
+          },
+          {
+            "action": "assert_visible",
+            "selector": ".error-message-container",
+            "expected_intent": "error"
+          }
+        ]
+      },
+      {
+        "feature": "Checkout Process",
+        "test_type": "edge",
+        "test_name": "Checkout with No Items in Cart",
+        "expected_intent": "validation",
+        "steps": [
+          {
+            "action": "goto",
+            "url": "https://www.saucedemo.com/",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "standard_user",
+            "selector": "#user-name",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "secret_sauce",
+            "selector": "#password",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "#login-button",
+            "expected_intent": "success"
+          },
+          {
+            "action": "goto",
+            "url": "https://www.saucedemo.com/cart",
+            "expected_intent": "success"
+          },
+          {
+            "action": "assert_visible",
+            "selector": ".error-message-container",
+            "expected_intent": "validation"
+          }
+        ]
+      },
+      {
+        "feature": "Checkout Process",
+        "test_type": "e2e",
+        "test_name": "End-to-End Checkout Flow",
+        "expected_intent": "success",
+        "steps": [
+          {
+            "action": "goto",
+            "url": "https://www.saucedemo.com/",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "standard_user",
+            "selector": "#user-name",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "secret_sauce",
+            "selector": "#password",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "#login-button",
+            "expected_intent": "success"
+          },
+          {
+            "action": "goto",
+            "url": "https://www.saucedemo.com/inventory",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": ".add-to-cart-button",
+            "expected_intent": "success"
+          },
+          {
+            "action": "goto",
+            "url": "https://www.saucedemo.com/cart",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "#checkout-button",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "John",
+            "selector": "#first-name",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "Doe",
+            "selector": "#last-name",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "12345",
+            "selector": "#postal-code",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "#continue-button",
+            "expected_intent": "success"
+          },
+          {
+            "action": "assert_visible",
+            "selector": "#checkout-complete",
+            "expected_intent": "success"
+          }
+        ]
+      }
+    ]
+  },
+  "base_url": "https://www.saucedemo.com/"
+}

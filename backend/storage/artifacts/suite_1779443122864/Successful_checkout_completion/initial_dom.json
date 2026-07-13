@@ -1,0 +1,5 @@
+{
+  "test_name": "Successful checkout completion",
+  "base_url": "https://novalantis.com",
+  "dom_elements": []
+}

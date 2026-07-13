@@ -1,0 +1,7 @@
+{
+  "step_index": 7,
+  "action": "click",
+  "selector_used": "#place-order-button",
+  "recovery_attempts": [],
+  "error": "Selector pre-validation failed for '#place-order-button' on 'click': Healed selector semantic mismatch: original=#place-order-button new=#continue"
+}

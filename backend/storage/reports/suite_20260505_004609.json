@@ -1,0 +1,556 @@
+{
+  "application": "OrangeHRM",
+  "application_map": {
+    "pages": [
+      "Login",
+      "Dashboard",
+      "PIM",
+      "Leave",
+      "Time",
+      "Recruitment",
+      "Performance",
+      "Admin"
+    ],
+    "features": [
+      "User Authentication",
+      "Employee Management",
+      "Leave Management",
+      "Time Management",
+      "Recruitment Management",
+      "Performance Management",
+      "Admin Settings"
+    ],
+    "flows": [
+      "User Login Flow",
+      "Employee Addition Flow",
+      "Leave Application Flow",
+      "Time Entry Flow",
+      "Recruitment Process Flow",
+      "Performance Review Flow",
+      "Admin User Management Flow"
+    ]
+  },
+  "test_suite": {
+    "tests": [
+      {
+        "feature": "User Authentication",
+        "test_type": "positive",
+        "test_name": "Successful Login",
+        "expected_intent": "success",
+        "steps": [
+          {
+            "action": "goto",
+            "url": "https://opensource-demo.orangehrmlive.com/",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "Admin",
+            "selector": "#txtUsername",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "admin123",
+            "selector": "#txtPassword",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "#btnLogin",
+            "expected_intent": "success"
+          },
+          {
+            "action": "assert_visible",
+            "selector": "#welcome",
+            "expected_intent": "success"
+          }
+        ]
+      },
+      {
+        "feature": "User Authentication",
+        "test_type": "negative",
+        "test_name": "Unsuccessful Login with Invalid Credentials",
+        "expected_intent": "error",
+        "steps": [
+          {
+            "action": "goto",
+            "url": "https://opensource-demo.orangehrmlive.com/",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "InvalidUser",
+            "selector": "#txtUsername",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "InvalidPass",
+            "selector": "#txtPassword",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "#btnLogin",
+            "expected_intent": "success"
+          },
+          {
+            "action": "assert_visible",
+            "selector": "#spanMessage",
+            "expected_intent": "error"
+          }
+        ]
+      },
+      {
+        "feature": "User Authentication",
+        "test_type": "edge",
+        "test_name": "Login with Empty Credentials",
+        "expected_intent": "validation",
+        "steps": [
+          {
+            "action": "goto",
+            "url": "https://opensource-demo.orangehrmlive.com/",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "",
+            "selector": "#txtUsername",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "",
+            "selector": "#txtPassword",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "#btnLogin",
+            "expected_intent": "success"
+          },
+          {
+            "action": "assert_visible",
+            "selector": "#spanMessage",
+            "expected_intent": "validation"
+          }
+        ]
+      },
+      {
+        "feature": "User Authentication",
+        "test_type": "e2e",
+        "test_name": "Complete User Login and Navigate to Dashboard",
+        "expected_intent": "success",
+        "steps": [
+          {
+            "action": "goto",
+            "url": "https://opensource-demo.orangehrmlive.com/",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "Admin",
+            "selector": "#txtUsername",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "admin123",
+            "selector": "#txtPassword",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "#btnLogin",
+            "expected_intent": "success"
+          },
+          {
+            "action": "assert_visible",
+            "selector": "#welcome",
+            "expected_intent": "success"
+          },
+          {
+            "action": "assert_visible",
+            "selector": "#menu_dashboard_index",
+            "expected_intent": "success"
+          }
+        ]
+      },
+      {
+        "feature": "Employee Management",
+        "test_type": "positive",
+        "test_name": "Add New Employee",
+        "expected_intent": "success",
+        "steps": [
+          {
+            "action": "goto",
+            "url": "https://opensource-demo.orangehrmlive.com/",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "Admin",
+            "selector": "#txtUsername",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "admin123",
+            "selector": "#txtPassword",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "#btnLogin",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "#menu_pim_viewPimModule",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "#btnAdd",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "John",
+            "selector": "#firstName",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "Doe",
+            "selector": "#lastName",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "#btnSave",
+            "expected_intent": "success"
+          },
+          {
+            "action": "assert_visible",
+            "selector": "#personalDetails",
+            "expected_intent": "success"
+          }
+        ]
+      },
+      {
+        "feature": "Employee Management",
+        "test_type": "negative",
+        "test_name": "Add Employee with Missing Required Fields",
+        "expected_intent": "error",
+        "steps": [
+          {
+            "action": "goto",
+            "url": "https://opensource-demo.orangehrmlive.com/",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "Admin",
+            "selector": "#txtUsername",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "admin123",
+            "selector": "#txtPassword",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "#btnLogin",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "#menu_pim_viewPimModule",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "#btnAdd",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "",
+            "selector": "#firstName",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "",
+            "selector": "#lastName",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "#btnSave",
+            "expected_intent": "success"
+          },
+          {
+            "action": "assert_visible",
+            "selector": "#errorMessage",
+            "expected_intent": "error"
+          }
+        ]
+      },
+      {
+        "feature": "Leave Management",
+        "test_type": "positive",
+        "test_name": "Apply for Leave",
+        "expected_intent": "success",
+        "steps": [
+          {
+            "action": "goto",
+            "url": "https://opensource-demo.orangehrmlive.com/",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "Admin",
+            "selector": "#txtUsername",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "admin123",
+            "selector": "#txtPassword",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "#btnLogin",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "#menu_leave_viewLeaveModule",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "#btnApply",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "Annual Leave",
+            "selector": "#leaveType",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "2023-10-01",
+            "selector": "#fromDate",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "2023-10-05",
+            "selector": "#toDate",
+            "expected_intent": "success"
+          },
+          {
+            "action": "assert_visible",
+            "selector": "#leaveConfirmation",
+            "expected_intent": "success"
+          }
+        ]
+      },
+      {
+        "feature": "Leave Management",
+        "test_type": "negative",
+        "test_name": "Apply for Leave with Invalid Dates",
+        "expected_intent": "error",
+        "steps": [
+          {
+            "action": "goto",
+            "url": "https://opensource-demo.orangehrmlive.com/",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "Admin",
+            "selector": "#txtUsername",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "admin123",
+            "selector": "#txtPassword",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "#btnLogin",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "#menu_leave_viewLeaveModule",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "#btnApply",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "Annual Leave",
+            "selector": "#leaveType",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "2023-10-05",
+            "selector": "#fromDate",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "2023-10-01",
+            "selector": "#toDate",
+            "expected_intent": "success"
+          },
+          {
+            "action": "assert_visible",
+            "selector": "#errorMessage",
+            "expected_intent": "error"
+          }
+        ]
+      },
+      {
+        "feature": "Time Management",
+        "test_type": "edge",
+        "test_name": "Submit Time Entry with Empty Fields",
+        "expected_intent": "validation",
+        "steps": [
+          {
+            "action": "goto",
+            "url": "https://opensource-demo.orangehrmlive.com/",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "Admin",
+            "selector": "#txtUsername",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "admin123",
+            "selector": "#txtPassword",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "#btnLogin",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "#menu_time_viewTimeModule",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "#btnAdd",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "",
+            "selector": "#timeIn",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "",
+            "selector": "#timeOut",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "#btnSave",
+            "expected_intent": "success"
+          },
+          {
+            "action": "assert_visible",
+            "selector": "#errorMessage",
+            "expected_intent": "validation"
+          }
+        ]
+      },
+      {
+        "feature": "Recruitment Management",
+        "test_type": "e2e",
+        "test_name": "Complete Recruitment Process",
+        "expected_intent": "success",
+        "steps": [
+          {
+            "action": "goto",
+            "url": "https://opensource-demo.orangehrmlive.com/",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "Admin",
+            "selector": "#txtUsername",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "admin123",
+            "selector": "#txtPassword",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "#btnLogin",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "#menu_recruitment_viewRecruitmentModule",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "#btnAdd",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "Jane Smith",
+            "selector": "#candidateName",
+            "expected_intent": "success"
+          },
+          {
+            "action": "fill",
+            "value": "jane.smith@example.com",
+            "selector": "#email",
+            "expected_intent": "success"
+          },
+          {
+            "action": "click",
+            "selector": "#btnSave",
+            "expected_intent": "success"
+          },
+          {
+            "action": "assert_visible",
+            "selector": "#recruitmentConfirmation",
+            "expected_intent": "success"
+          }
+        ]
+      }
+    ]
+  }
+}
