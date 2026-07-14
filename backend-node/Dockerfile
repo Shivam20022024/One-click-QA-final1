@@ -32,7 +32,7 @@ COPY package*.json ./
 RUN npm install
 
 # Install Playwright browsers (if needed for @playwright/test)
-RUN npx playwright install --with-deps chromium
+RUN npx playwright install --with-deps
 
 COPY . .
 
