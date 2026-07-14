@@ -119,13 +119,13 @@ export const initExecutionWorker = (io: any) => {
         logMsg('Initializing shared browser for full pipeline video recording...');
         const browserName = (browser || 'chromium').toLowerCase();
         if (browserName === 'firefox') {
-          sharedBrowser = await firefox.launch({ headless: false, args: ['--disable-blink-features=AutomationControlled', '--disable-web-security'] });
+          sharedBrowser = await firefox.launch({ headless: true, args: ['--disable-blink-features=AutomationControlled', '--disable-web-security'] });
         } else if (browserName === 'webkit' || browserName === 'safari') {
-          sharedBrowser = await webkit.launch({ headless: false, args: ['--disable-blink-features=AutomationControlled', '--disable-web-security'] });
+          sharedBrowser = await webkit.launch({ headless: true, args: ['--disable-blink-features=AutomationControlled', '--disable-web-security'] });
         } else if (browserName === 'edge' || browserName === 'msedge') {
-          sharedBrowser = await chromium.launch({ channel: 'msedge', headless: false, args: ['--disable-blink-features=AutomationControlled', '--disable-web-security'] });
+          sharedBrowser = await chromium.launch({ channel: 'msedge', headless: true, args: ['--disable-blink-features=AutomationControlled', '--disable-web-security'] });
         } else {
-          sharedBrowser = await chromium.launch({ headless: false, args: ['--disable-blink-features=AutomationControlled', '--disable-web-security'] });
+          sharedBrowser = await chromium.launch({ headless: true, args: ['--disable-blink-features=AutomationControlled', '--disable-web-security'] });
         }
         
         logMsg(`[Telemetry] BROWSER_ENGINE_STARTED: ${browserName}`);

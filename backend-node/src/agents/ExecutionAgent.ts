@@ -32,13 +32,13 @@ export class ExecutionAgent {
       emitLog('browser_launch', `Launching ${browserName} browser`);
       const browserNameLower = browserName.toLowerCase();
       if (browserNameLower === 'firefox') {
-        browser = await firefox.launch({ headless: false, args: ['--disable-blink-features=AutomationControlled', '--disable-web-security'] });
+        browser = await firefox.launch({ headless: true, args: ['--disable-blink-features=AutomationControlled', '--disable-web-security'] });
       } else if (browserNameLower === 'webkit' || browserNameLower === 'safari') {
-        browser = await webkit.launch({ headless: false, args: ['--disable-blink-features=AutomationControlled', '--disable-web-security'] });
+        browser = await webkit.launch({ headless: true, args: ['--disable-blink-features=AutomationControlled', '--disable-web-security'] });
       } else if (browserNameLower === 'edge' || browserNameLower === 'msedge') {
-        browser = await chromium.launch({ channel: 'msedge', headless: false, args: ['--disable-blink-features=AutomationControlled', '--disable-web-security'] });
+        browser = await chromium.launch({ channel: 'msedge', headless: true, args: ['--disable-blink-features=AutomationControlled', '--disable-web-security'] });
       } else {
-        browser = await chromium.launch({ headless: false, args: ['--disable-blink-features=AutomationControlled', '--disable-web-security'] });
+        browser = await chromium.launch({ headless: true, args: ['--disable-blink-features=AutomationControlled', '--disable-web-security'] });
       }
 
       const videoDir = `./temp/videos/${executionId}`;

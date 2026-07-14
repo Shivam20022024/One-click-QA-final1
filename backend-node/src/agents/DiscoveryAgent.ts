@@ -99,7 +99,7 @@ export class DiscoveryAgent {
     if (!options.sharedPage) {
       console.log(`[DiscoveryAgent] Launching Playwright to crawl starting at ${targetUrl}...`);
       browser = await chromium.launch({ 
-        headless: false,
+        headless: true,
         args: ['--disable-blink-features=AutomationControlled', '--disable-web-security']
       });
       context = await browser.newContext({
