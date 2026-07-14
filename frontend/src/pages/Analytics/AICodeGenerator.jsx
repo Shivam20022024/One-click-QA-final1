@@ -171,7 +171,7 @@ export default function AICodeGenerator() {
             <button
               onClick={handleExecute}
               disabled={executing || framework !== 'playwright'}
-              className="w-full py-2.5 bg-slate-800 hover:bg-slate-700 text-white rounded-xl font-bold flex justify-center items-center gap-2 border border-white/10 disabled:opacity-50 transition mt-2"
+              className="w-full py-2.5 bg-white hover:bg-gray-50 text-slate-900 rounded-xl font-bold flex justify-center items-center gap-2 border border-slate-200 shadow-sm disabled:opacity-50 transition mt-2"
               title={framework !== 'playwright' ? "Sandbox execution only supports Playwright currently" : ""}
             >
               {executing ? <RefreshCw className="w-4 h-4 animate-spin" /> : <PlayCircle className={`w-4 h-4 ${framework === 'playwright' ? 'text-emerald-400' : 'text-slate-500'}`} />}
