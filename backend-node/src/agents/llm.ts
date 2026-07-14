@@ -47,6 +47,7 @@ export const invokeWithRetry = async (
 ) => {
   let attempt = 1;
   let currentTokens = maxTokens;
+  let lastError: any = null;
 
   if (context && context.executionId) {
     const callCountKey = `execution_stats:${context.executionId}:llm_calls`;
@@ -137,14 +138,17 @@ export const invokeWithRetry = async (
       return response;
     } catch (err: any) {
       if (err.message?.includes('429') || err.message?.includes('too large') || err.message?.includes('maximum context length') || err.status === 429) {
-        console.warn(`[LLM Error] Token limit exceeded on attempt ${attempt}. Retrying with reduced context.`);
+        console.warn(`[LLM Error] Token limit or rate limit exceeded on attempt ${attempt}. Error: ${err.message}. Retrying with reduced context.`);
+        lastError = err;
         attempt++;
         currentTokens = Math.floor(currentTokens / 2);
+        // Wait a bit before retrying in case of rate limits
+        await new Promise(resolve => setTimeout(resolve, 2000));
       } else {
         throw err;
       }
     }
   }
   
-  throw new Error(`LLM invocation failed after ${MAX_RETRIES_PER_AGENT} attempts due to token limits or other errors.`);
+  throw new Error(`LLM invocation failed after ${MAX_RETRIES_PER_AGENT} attempts due to token limits or other errors. Last error: ${lastError?.message || 'Unknown'}`);
 };
